@@ -14,6 +14,14 @@ public class User{
     @Id
     private String uname;
     @Column
+    private String fname;
+    @Column
+    private String lname;
+    @Column
+    private String email;
+    @Column
+    private int cnumbr;
+    @Column
     private String passwd;
 
     public String getUname() {
