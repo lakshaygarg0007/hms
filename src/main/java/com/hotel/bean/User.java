@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-public class Employee{
+public class User{
 
     @Id
     private String uname;
@@ -20,12 +20,12 @@ public class Employee{
         return uname;
     }
 
-    public Employee(){
+    public User(){
 
     }
 
 
-    public Employee(String uname,String passwd){
+    public User(String uname,String passwd){
         this.uname=uname;
         this.passwd=passwd;
     }

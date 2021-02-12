@@ -2,8 +2,8 @@ package com.hotel.controller;
 
 
 import com.hotel.Repository.DBRepository;
-import com.hotel.bean.Employee;
 import com.hotel.bean.EmployeeFunctions;
+import com.hotel.bean.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,9 +27,9 @@ public class HomeController {
 
     @RequestMapping(value = "/dashboard",method = RequestMethod.POST)
     public String  fetchdashboard(@RequestParam(value = "uname") String uname, @RequestParam(value = "passwd")String passwd, Model model){
-     Employee emp=new Employee(uname,passwd);
-        obj.save(emp);
-        model.addAttribute("emp",emp);
+     User user=new User(uname,passwd);
+        obj.save(user);
+        model.addAttribute("user",user);
         return "dashboard";
 //15-3-20 to 15-04-2020
     }
