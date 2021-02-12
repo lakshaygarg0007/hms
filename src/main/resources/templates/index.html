@@ -8,10 +8,20 @@
 
 <h1 align="center">Registrator User </h1>
 
-<form action="/dashboard">
+<form action="/dashboard" method="post">
     <div align="center">
-    <input type="text" placeholder="First Name" name="fname">
-    <input type="text" placeholder="Last Name" name="lname">
+
+       <select >
+           <option value="manager">Manager</option>
+           <option value="collector" >Collector</option>
+           <option value="approval">Approval</option>
+       </select>
+        <br><br>
+
+    <input type="text" placeholder="User Name" name="uname">
+        <br>
+     <input type="password" placeholder="Password" name="passwd">
+        <br>
     <input type="submit" value="Submit">
     </div>
 </form>

@@ -1,5 +1,8 @@
 package com.hotel.bean;
 
+import javafx.scene.control.PasswordField;
+import sun.security.util.Password;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -9,12 +12,12 @@ import javax.persistence.Table;
 public class Employee{
 
     @Id
-    private String fname;
+    private String uname;
     @Column
-    private String lname;
+    private String passwd;
 
-    public String getFname() {
-        return fname;
+    public String getUname() {
+        return uname;
     }
 
     public Employee(){
@@ -22,21 +25,21 @@ public class Employee{
     }
 
 
-    public Employee(String fname,String lname){
-        this.fname=fname;
-        this.lname=lname;
+    public Employee(String uname,String passwd){
+        this.uname=uname;
+        this.passwd=passwd;
     }
 
 
-    public void setLname(String lname) {
-        this.lname = lname;
+    public void setPasswd(String passwd) {
+        this.passwd = passwd;
     }
 
-    public String getLname() {
-        return lname;
+    public String getPasswd() {
+        return passwd;
     }
 
-    public void setFname(String fname) {
-        this.fname = fname;
+    public void setUname(String uname) {
+        this.uname = uname;
     }
 }

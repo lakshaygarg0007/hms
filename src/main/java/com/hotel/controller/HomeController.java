@@ -7,6 +7,7 @@ import com.hotel.bean.EmployeeFunctions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,24 +21,41 @@ public class HomeController {
 
     @RequestMapping(value = "/")
     public String sendForm() {
-        return "index";
+        return "Registration";
     }
 
 
-    @RequestMapping("/dashboard")
-    public String fetchdashboard(@RequestParam(value = "fname") String fname,@RequestParam(value = "lname")String lname ,Model model){
-        Employee emp=new Employee(fname,lname);
+    @RequestMapping(value = "/dashboard",method = RequestMethod.POST)
+    public String  fetchdashboard(@RequestParam(value = "uname") String uname, @RequestParam(value = "passwd")String passwd, Model model){
+     Employee emp=new Employee(uname,passwd);
         obj.save(emp);
         model.addAttribute("emp",emp);
         return "dashboard";
+//15-3-20 to 15-04-2020
     }
 
-   /* @RequestMapping("/verify")
+    @RequestMapping(value = "/demo",method = RequestMethod.POST)
+    public String demo(@RequestParam(value="role") String s,Model model){
+        model.addAttribute("printthis",s);
+        System.out.println(s);
+        if(s=="manager"){
+            return "index";
+        }
+        else
+        return "demo";
+    }
+
+
+    @RequestMapping("/verify")
+    public String verify(){
+        return "verify";
+    }
+
+    @RequestMapping("/check")
     public String verify(@RequestParam(value="fname")String fname,@RequestParam(value="lname") String lname,Model model){
-        Employee emp=new Employee(fname,lname);
-        boolean b=obj.existsById(emp.getFname());
+        boolean b=obj.existsById(fname);
         model.addAttribute("value",b);
         return "check";
-    }*/
+    }
 
 }
