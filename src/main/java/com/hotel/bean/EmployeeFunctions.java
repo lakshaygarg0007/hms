@@ -7,10 +7,10 @@ import java.util.List;
 
 @Service
 public class EmployeeFunctions {
-    List<Employee> list=new ArrayList<>();
+    List<User> list=new ArrayList<>();
 
-    public void addemployee(Employee emp){
-        list.add(emp);
+    public void addemployee(User user){
+        list.add(user);
     }
 
 }
