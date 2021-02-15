@@ -7,9 +7,9 @@ import java.util.List;
 
 @Service
 public class EmployeeFunctions {
-    List<User> list=new ArrayList<>();
+    List<Manager> list=new ArrayList<>();
 
-    public void addemployee(User user){
+    public void addemployee(Manager user){
         list.add(user);
     }
 

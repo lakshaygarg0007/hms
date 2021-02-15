@@ -12,13 +12,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
+
 @Table
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class User{
+@Entity
+public class Manager{
 
     @Id
     @Column

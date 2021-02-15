@@ -2,7 +2,6 @@ package com.hotel.controller;
 
 
 import com.hotel.Repository.DBRepository;
-import com.hotel.bean.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
 
-    @Autowired
+ /*   @Autowired
     DBRepository obj;
-
+*/
     @RequestMapping(value = "/")
     public String sendForm() {
         return "Registration";
@@ -46,13 +45,13 @@ public class HomeController {
     public String verify(){
         return "verify";
     }
-
+/*
     @RequestMapping("/check")
     public String verify(@RequestParam(value="fname")String fname,@RequestParam(value="lname") String lname,Model model){
         boolean b=obj.existsById(fname);
         model.addAttribute("value",b);
         return "check";
-    }
+    }*/
 
    /* @RequestMapping(value = "/payment",method = RequestMethod.POST)
     public String payment(@RequestParam(value = )){
