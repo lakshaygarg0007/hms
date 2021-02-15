@@ -6,15 +6,7 @@
 </head>
 <body>
 
-<script th:inline="javascript">
-    /*<![CDATA[*/
-    var val=/*[[${value}]]*/
-    if(val==true)
-        alert("Welcome");
-    else
-        alert("Wrong Cred");
-    /*]]>*/
-</script>
+<h2 th:text="${cnumber}"></h2>
 
 </body>
 </html>
