@@ -1,10 +1,8 @@
 package com.hotel.controller;
 
 
-import com.hotel.Repository.DBRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,14 +10,22 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
 
- /*   @Autowired
-    DBRepository obj;
-*/
+    @Autowired
+
     @RequestMapping(value = "/")
-    public String sendForm() {
-        return "Registration";
+    public String index() {
+        return "index";
     }
 
+    @RequestMapping(value = "/newRegistration")
+    public String newRegistraion(){
+        return "newRegistration";
+    }
+
+    @RequestMapping(value = "/login")
+    public String login(){
+        return "login";
+    }
 
    /* @RequestMapping(value = "/dashboard",method = RequestMethod.POST)
     public String  fetchdashboard(@RequestParam(value = "uname") String uname, @RequestParam(value = "passwd")String passwd, Model model){
@@ -29,7 +35,7 @@ public class HomeController {
         return "dashboard";
     }*/
 
-    @RequestMapping(value = "/demo",method = RequestMethod.POST)
+ /*   @RequestMapping(value = "/demo",method = RequestMethod.POST)
     public String demo(@RequestParam(value="role") String s,Model model){
         model.addAttribute("printthis",s);
         System.out.println(s);
@@ -39,13 +45,9 @@ public class HomeController {
         else
         return "demo";
     }
+*/
 
-
-    @RequestMapping("/verify")
-    public String verify(){
-        return "verify";
-    }
-/*
+ /*
     @RequestMapping("/check")
     public String verify(@RequestParam(value="fname")String fname,@RequestParam(value="lname") String lname,Model model){
         boolean b=obj.existsById(fname);

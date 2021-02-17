@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h2 align="center">Registor Here</h2>
+
+    <div align="center">
+    <form method="post" action="/managerRegistrationVerify">
+        <br>
+        <input type="text" placeholder="Hotel ID" name="hotelId">
+        <br><br>
+        <input type="text" placeholder="First Name" name="fname">
+        <br><br>
+        <input type="text" placeholder="Last Name" name="lname">
+        <br><br>
+        <input type="text" placeholder="Email" name="email">
+        <br><br>
+        <input type="text" placeholder="Contact Number" name="cnumber">
+        <br><br>
+        <input type="password" placeholder="Password" name="passwd">
+        <br><br>
+        <input type="password" placeholder="Retype Password" name="retypePasswd">
+        <br><br>
+        <br>
+        <input type="submit" placeholder="Submit"
+        >
+
+    </form>
+    </div>
+
+    <br>
+    <!--This is For if There is Any Error in Registration-->
+    <div th:text="${error}" align="center" ></div>
+
+</body>
+</html>

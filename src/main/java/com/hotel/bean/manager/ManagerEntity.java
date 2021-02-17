@@ -1,4 +1,4 @@
-package com.hotel.bean;
+package com.hotel.bean.manager;
 
 import javafx.scene.control.PasswordField;
 import lombok.AllArgsConstructor;
@@ -19,19 +19,18 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @Entity
-public class Manager{
+public class ManagerEntity {
 
     @Id
-    @Column
-    private String uname;
+    private String hotelId;
     @Column
     private String fname;
     @Column
     private String lname;
     @Column
-    private String cnumber;
-    @Column
     private String email;
+    @Column
+    private String cnumber;
     @Column
     private String passwd;
 }
