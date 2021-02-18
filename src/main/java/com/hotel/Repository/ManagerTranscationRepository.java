@@ -11,4 +11,5 @@ import java.util.List;
 public interface    ManagerTranscationRepository extends CrudRepository<ManagerTranscation,String> {
     List<ManagerTranscation> findByHotelIdAndDate(String hotelId, Date date);
     List<ManagerTranscation> findByDateBetween(Date starting,Date ending);
+
 }

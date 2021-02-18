@@ -1,12 +1,10 @@
 package com.hotel.Service.manager;
 
 import com.hotel.Repository.ManagerRegistrationRepository;
-import com.hotel.Repository.ManagerTranscationRepository;
 import com.hotel.bean.manager.ManagerEntity;
 import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
 
 import java.util.Map;
 

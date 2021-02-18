@@ -1,7 +1,5 @@
 package com.hotel.Repository;
 import com.hotel.bean.manager.ManagerEntity;
-import com.hotel.bean.manager.ManagerTranscation;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
