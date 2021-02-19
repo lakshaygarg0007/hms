@@ -2,30 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f22064d-7000-4c81-b19e-75741f7e27ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/signup-image.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a3a8fe66814bdd41d3a5b721f067b49eb3f31ca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/AtStarting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/AtStarting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/Repository/CollectorManagerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/Repository/CollectorManagerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/Repository/CollectorRegistrationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/Repository/CollectorRegistrationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/Service/manager/ManagerRegistrationVerification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/Service/manager/ManagerRegistrationVerification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/bean/collector/collectorHotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/bean/collector/collectorHotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/controller/manager/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/controller/manager/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/controller/manager/ManagerRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/controller/manager/ManagerRegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/thymeleaf/TemplateResolverConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/thymeleaf/TemplateResolverConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collector/collectorRegistration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collector/collectorRegistration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/manager/managerLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/manager/managerRegistration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/manager/managerRegistration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newRegistration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newRegistration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hotel/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hotel/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hotel/AtStarting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hotel/Repository/CollectorManagerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hotel/Repository/CollectorManagerRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hotel/Service/manager/ManagerRegistrationVerification.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hotel/Service/manager/ManagerRegistrationVerification.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hotel/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hotel/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hotel/controller/manager/ManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hotel/controller/manager/ManagerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hotel/controller/manager/ManagerRegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hotel/controller/manager/ManagerRegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hotel/thymeleaf/TemplateResolverConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hotel/thymeleaf/TemplateResolverConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/newRegistration.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/newRegistration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hotel/bean/collector/collectorHotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hotel/bean/collector/collectorHotel.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,15 +93,15 @@
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/static/images" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates/manager" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fonts/material-icon" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fonts" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static" />
     </key>
   </component>
   <component name="RunManager">
@@ -208,10 +196,10 @@
     </state>
     <state x="395" y="127" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.808@0.23.1440.808" timestamp="1613473417864" />
     <state x="395" y="127" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.811@0.23.1440.811" timestamp="1613107047198" />
-    <state width="1388" height="560" key="GridCell.Tab.0.bottom" timestamp="1613727105908">
+    <state width="1388" height="560" key="GridCell.Tab.0.bottom" timestamp="1613730320180">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state width="1388" height="560" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1613727105908" />
+    <state width="1388" height="560" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1613730320180" />
     <state width="1388" height="560" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1613635960089" />
     <state width="1388" height="553" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1613108841118" />
     <state width="1388" height="350" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1613286072319" />
@@ -221,10 +209,10 @@
     <state width="1388" height="553" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1613117559653" />
     <state width="1388" height="553" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1613121863950" />
     <state width="1388" height="553" key="GridCell.Tab.0.bottom/0.23.1440.826@0.23.1440.826" timestamp="1613122256236" />
-    <state width="1388" height="560" key="GridCell.Tab.0.center" timestamp="1613727105907">
+    <state width="1388" height="560" key="GridCell.Tab.0.center" timestamp="1613730320179">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state width="1388" height="560" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1613727105907" />
+    <state width="1388" height="560" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1613730320179" />
     <state width="1388" height="560" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1613635960088" />
     <state width="1388" height="553" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1613108841117" />
     <state width="1388" height="350" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1613286072318" />
@@ -234,10 +222,10 @@
     <state width="1388" height="553" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1613117559652" />
     <state width="1388" height="553" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1613121863950" />
     <state width="1388" height="553" key="GridCell.Tab.0.center/0.23.1440.826@0.23.1440.826" timestamp="1613122256235" />
-    <state width="1388" height="560" key="GridCell.Tab.0.left" timestamp="1613727105907">
+    <state width="1388" height="560" key="GridCell.Tab.0.left" timestamp="1613730320179">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state width="1388" height="560" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1613727105907" />
+    <state width="1388" height="560" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1613730320179" />
     <state width="1388" height="560" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1613635960087" />
     <state width="1388" height="553" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1613108841116" />
     <state width="1388" height="350" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1613286072318" />
@@ -247,10 +235,10 @@
     <state width="1388" height="553" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1613117559651" />
     <state width="1388" height="553" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1613121863949" />
     <state width="1388" height="553" key="GridCell.Tab.0.left/0.23.1440.826@0.23.1440.826" timestamp="1613122256235" />
-    <state width="1388" height="560" key="GridCell.Tab.0.right" timestamp="1613727105907">
+    <state width="1388" height="560" key="GridCell.Tab.0.right" timestamp="1613730320180">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state width="1388" height="560" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1613727105907" />
+    <state width="1388" height="560" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1613730320180" />
     <state width="1388" height="560" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1613635960088" />
     <state width="1388" height="553" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1613108841117" />
     <state width="1388" height="350" key="GridCell.Tab.0.right/0.23.1440.814@0.23.1440.814" timestamp="1613286072319" />
@@ -260,10 +248,10 @@
     <state width="1388" height="553" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1613117559652" />
     <state width="1388" height="553" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1613121863950" />
     <state width="1388" height="553" key="GridCell.Tab.0.right/0.23.1440.826@0.23.1440.826" timestamp="1613122256236" />
-    <state width="1388" height="560" key="GridCell.Tab.1.bottom" timestamp="1613727105909">
+    <state width="1388" height="560" key="GridCell.Tab.1.bottom" timestamp="1613730320181">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state width="1388" height="560" key="GridCell.Tab.1.bottom/0.23.1440.808@0.23.1440.808" timestamp="1613727105909" />
+    <state width="1388" height="560" key="GridCell.Tab.1.bottom/0.23.1440.808@0.23.1440.808" timestamp="1613730320181" />
     <state width="1388" height="560" key="GridCell.Tab.1.bottom/0.23.1440.811@0.23.1440.811" timestamp="1613635960090" />
     <state width="1388" height="553" key="GridCell.Tab.1.bottom/0.23.1440.812@0.23.1440.812" timestamp="1613108841120" />
     <state width="1388" height="350" key="GridCell.Tab.1.bottom/0.23.1440.814@0.23.1440.814" timestamp="1613286072320" />
@@ -273,10 +261,10 @@
     <state width="1388" height="553" key="GridCell.Tab.1.bottom/0.23.1440.823@0.23.1440.823" timestamp="1613117559655" />
     <state width="1388" height="553" key="GridCell.Tab.1.bottom/0.23.1440.825@0.23.1440.825" timestamp="1613121863952" />
     <state width="1388" height="553" key="GridCell.Tab.1.bottom/0.23.1440.826@0.23.1440.826" timestamp="1613122256237" />
-    <state width="1388" height="560" key="GridCell.Tab.1.center" timestamp="1613727105908">
+    <state width="1388" height="560" key="GridCell.Tab.1.center" timestamp="1613730320180">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state width="1388" height="560" key="GridCell.Tab.1.center/0.23.1440.808@0.23.1440.808" timestamp="1613727105908" />
+    <state width="1388" height="560" key="GridCell.Tab.1.center/0.23.1440.808@0.23.1440.808" timestamp="1613730320180" />
     <state width="1388" height="560" key="GridCell.Tab.1.center/0.23.1440.811@0.23.1440.811" timestamp="1613635960089" />
     <state width="1388" height="553" key="GridCell.Tab.1.center/0.23.1440.812@0.23.1440.812" timestamp="1613108841119" />
     <state width="1388" height="350" key="GridCell.Tab.1.center/0.23.1440.814@0.23.1440.814" timestamp="1613286072319" />
@@ -286,10 +274,10 @@
     <state width="1388" height="553" key="GridCell.Tab.1.center/0.23.1440.823@0.23.1440.823" timestamp="1613117559654" />
     <state width="1388" height="553" key="GridCell.Tab.1.center/0.23.1440.825@0.23.1440.825" timestamp="1613121863951" />
     <state width="1388" height="553" key="GridCell.Tab.1.center/0.23.1440.826@0.23.1440.826" timestamp="1613122256237" />
-    <state width="1388" height="560" key="GridCell.Tab.1.left" timestamp="1613727105908">
+    <state width="1388" height="560" key="GridCell.Tab.1.left" timestamp="1613730320180">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state width="1388" height="560" key="GridCell.Tab.1.left/0.23.1440.808@0.23.1440.808" timestamp="1613727105908" />
+    <state width="1388" height="560" key="GridCell.Tab.1.left/0.23.1440.808@0.23.1440.808" timestamp="1613730320180" />
     <state width="1388" height="560" key="GridCell.Tab.1.left/0.23.1440.811@0.23.1440.811" timestamp="1613635960089" />
     <state width="1388" height="553" key="GridCell.Tab.1.left/0.23.1440.812@0.23.1440.812" timestamp="1613108841119" />
     <state width="1388" height="350" key="GridCell.Tab.1.left/0.23.1440.814@0.23.1440.814" timestamp="1613286072319" />
@@ -299,10 +287,10 @@
     <state width="1388" height="553" key="GridCell.Tab.1.left/0.23.1440.823@0.23.1440.823" timestamp="1613117559653" />
     <state width="1388" height="553" key="GridCell.Tab.1.left/0.23.1440.825@0.23.1440.825" timestamp="1613121863951" />
     <state width="1388" height="553" key="GridCell.Tab.1.left/0.23.1440.826@0.23.1440.826" timestamp="1613122256237" />
-    <state width="1388" height="560" key="GridCell.Tab.1.right" timestamp="1613727105908">
+    <state width="1388" height="560" key="GridCell.Tab.1.right" timestamp="1613730320181">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state width="1388" height="560" key="GridCell.Tab.1.right/0.23.1440.808@0.23.1440.808" timestamp="1613727105908" />
+    <state width="1388" height="560" key="GridCell.Tab.1.right/0.23.1440.808@0.23.1440.808" timestamp="1613730320181" />
     <state width="1388" height="560" key="GridCell.Tab.1.right/0.23.1440.811@0.23.1440.811" timestamp="1613635960089" />
     <state width="1388" height="553" key="GridCell.Tab.1.right/0.23.1440.812@0.23.1440.812" timestamp="1613108841119" />
     <state width="1388" height="350" key="GridCell.Tab.1.right/0.23.1440.814@0.23.1440.814" timestamp="1613286072320" />
