@@ -1,10 +1,7 @@
 package com.hotel.controller.manager;
 
-import com.hotel.Repository.ManagerRegistrationRepository;
 import com.hotel.Service.manager.ManageTranscation;
 import com.hotel.Service.manager.ManagerLoginVerification;
-import com.hotel.Service.manager.ManagerRegistrationVerification;
-import com.zaxxer.hikari.util.SuspendResumeLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.*;
 
 import static com.sun.tools.javac.util.Constants.format;
 
@@ -45,7 +40,7 @@ public class ManagerController {
         }
         else{
             model.addAttribute("invalid","Invalid Credentials");
-            return "login";}
+            return "managerLogin";}
     }
 
 }

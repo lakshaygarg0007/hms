@@ -1,11 +1,15 @@
 package com.hotel.Service.manager;
 
+import com.hotel.AtStarting;
+import com.hotel.Repository.CollectorManagerRepository;
 import com.hotel.Repository.ManagerRegistrationRepository;
+import com.hotel.bean.collector.collectorHotel;
 import com.hotel.bean.manager.ManagerEntity;
 import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.Map;
 
 @Service
@@ -14,6 +18,8 @@ public class ManagerRegistrationVerification {
 
     @Autowired
     ManagerRegistrationRepository managerRegistrationRepository;
+    @Autowired
+    CollectorManagerRepository collectorManagerRepository;
 
     public Pair<String,Boolean> verify(Map<String,String> map)
     {
@@ -37,6 +43,9 @@ public class ManagerRegistrationVerification {
         {
             ManagerEntity managerEntity = new ManagerEntity(map.get("hotelId"), map.get("fname"), map.get("lname"), map.get("email"),map.get("cname") ,map.get("passwd"));
             managerRegistrationRepository.save(managerEntity);
+            Pair<Integer,String> pair=AtStarting.q.peek();
+            collectorHotel collectorHotel=new collectorHotel(pair.getValue(),map.get("hotelId"));
+            collectorManagerRepository.save(collectorHotel);
             return new Pair<>("Registered Successfully You can Login",true);
         }
 

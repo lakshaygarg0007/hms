@@ -1,16 +1,12 @@
 package com.hotel.controller;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
 
-    @Autowired
 
     @RequestMapping(value = "/")
     public String index() {
@@ -22,9 +18,14 @@ public class HomeController {
         return "newRegistration";
     }
 
-    @RequestMapping(value = "/login")
+    @RequestMapping(value = "/newLogin")
     public String login(){
-        return "login";
+        return "newLogin";
+    }
+    
+    @RequestMapping("/managerLogin")
+    public String managerLogin(){
+        return "managerLogin";
     }
 
    /* @RequestMapping(value = "/dashboard",method = RequestMethod.POST)

@@ -8,9 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
-import javax.jws.WebParam;
 import java.util.Map;
 
 @Controller
@@ -22,7 +20,7 @@ public class ManagerRegisterController {
         Pair<String,Boolean> pair= managerRegistrationVerification.verify(map);
         if(pair.getValue()){
             model.addAttribute("success",pair.getKey());
-            return "login";
+            return "managerLogin";
         }
         else{
             model.addAttribute("error",pair.getKey());
