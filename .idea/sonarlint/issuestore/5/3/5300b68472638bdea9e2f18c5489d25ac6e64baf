@@ -1,0 +1,12 @@
+
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ÈÄºüıÿÿÿÿ8Ö’ºÏû.
+c
+java:S1128"ARemove this unused import 'com.hotel.bean.manager.ManagerEntity'.(†ÓÛÈüÿÿÿÿ8±¼ÄÏû.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Šƒ£™
+M
+java:S1128
+"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Ö»ÀÏû.
+a
+java:S1128"DRemove this unused import 'com.hotel.bean.collector.collectorHotel'.(ë‘¹8”ãÀÏû.
+i
+java:S1192"GDefine a constant instead of duplicating this literal "passwd" 3 times.(ÑÈ…çşÿÿÿÿ8èœÃÏû.

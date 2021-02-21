@@ -48,5 +48,17 @@ public class TemplateResolverConfiguration {
         return templateResolver;
     }
 
+    @Bean
+    public ClassLoaderTemplateResolver fourthTemplateResolver() {
+        ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
+        templateResolver.setPrefix("templates/approver/");
+        templateResolver.setSuffix(".html");
+        templateResolver.setTemplateMode(TemplateMode.HTML);
+        templateResolver.setCharacterEncoding("UTF-8");
+        templateResolver.setOrder(1);
+        templateResolver.setCheckExistence(true);
+
+        return templateResolver;
+    }
 
 }

@@ -41,9 +41,9 @@ public class ManagerRegistrationVerification {
         }
         else
         {
-           /* ManagerEntity managerEntity = new ManagerEntity(map.get("hotelId"), map.get("fname"), map.get("lname"), map.get("email"),map.get("cname") ,map.get("passwd"));
+            ManagerEntity managerEntity = new ManagerEntity(map.get("hotelId"), map.get("fname"), map.get("lname"), map.get("email"),map.get("cname") ,map.get("passwd"));
             managerRegistrationRepository.save(managerEntity);
-            Pair<Integer,String> pair=AtStarting.q.peek();
+            /*Pair<Integer,String> pair=AtStarting.q.peek();
             collectorHotel collectorHotel=new collectorHotel(pair.getValue(),map.get("hotelId"));
             collectorManagerRepository.save(collectorHotel);
             */

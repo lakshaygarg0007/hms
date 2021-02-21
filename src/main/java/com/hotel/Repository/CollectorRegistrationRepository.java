@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface CollectorRegistrationRepository extends CrudRepository<CollectorEntity,String > {
     List<CollectorEntity> findAll();
-
+    boolean existsByCollectorIdAndPasswd(String collectorId,String passwd);
 }

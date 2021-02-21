@@ -8,6 +8,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface CollectorManagerRepository extends CrudRepository<collectorHotel,String> {
-    @Query("select count(CH.hotelId), CH.collectorID from collectorHotel as CH")
+    @Query(value = "select count(CH.hotelId), CH.collectorID from collectorHotel as CH group by CH.collectorID order by count(CH.hotelId) asc")
     List<collectorHotel> findAll();
 }

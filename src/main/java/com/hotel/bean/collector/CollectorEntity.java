@@ -21,13 +21,9 @@ public class CollectorEntity {
     @Id
     private String collectorId;
     @Column
-    private String approverId;
-    @Column
     private String fname;
     @Column
     private String lname;
-    @Column
-    private String password;
     @Column
     private String email;
     @Column

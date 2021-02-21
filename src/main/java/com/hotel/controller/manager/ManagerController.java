@@ -1,7 +1,7 @@
 package com.hotel.controller.manager;
 
 import com.hotel.Service.manager.ManageTranscation;
-import com.hotel.Service.manager.ManagerLoginVerification;
+import com.hotel.Service.LoginVerification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +17,7 @@ import static com.sun.tools.javac.util.Constants.format;
 public class ManagerController {
 
     @Autowired
-    ManagerLoginVerification managerLoginVerification;
+    LoginVerification loginVerification;
     @Autowired
     ManageTranscation manageTranscation;
 
@@ -32,15 +32,6 @@ public class ManagerController {
         return "managerRegistration";
     }
 
-    @RequestMapping(value = "/managerLoginVerification",method = RequestMethod.POST)
-    public String verify(@RequestParam(value = "hotelId")String hotelId, @RequestParam(value = "passwd")String passwd, Model model) throws ParseException {
-        System.out.println(hotelId+" "+passwd);
-        if(managerLoginVerification.verifyAtLogin(hotelId,passwd)){
-            return "managerDashboard";
-        }
-        else{
-            model.addAttribute("invalid","Invalid Credentials");
-            return "managerLogin";}
-    }
+
 
 }
