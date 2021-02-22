@@ -24,7 +24,7 @@ public class CollectorDashboard {
         List<collectorHotel> collectorHotels=collectorHotelRepository.findByCollectorID(collectorId);
         for(int i=0;i<collectorHotels.size();i++){
             String hotelId=collectorHotels.get(i).getHotelId();
-            List<ManagerTransaction> hotelList=managerTransactionRepository.findById(hotelId);
+            List<ManagerTransaction> hotelList=managerTransactionRepository.findByHotelId(hotelId);
             for(int j=0;j<hotelList.size();j++){
                 if(hotelList.get(j).getCollectedCash()){
                     myList.add(new Pair<>(hotelId,hotelList.get(i).getTransaction()));
@@ -33,7 +33,6 @@ public class CollectorDashboard {
         }
         return myList;
     }
-
 
 
 }

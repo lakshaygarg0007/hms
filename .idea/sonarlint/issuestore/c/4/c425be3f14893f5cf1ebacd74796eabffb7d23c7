@@ -1,0 +1,15 @@
+
+`
+java:S4488+"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ã§Œˆ
+`
+java:S44882"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ªÖÓ¸
+€
+java:S4144"^Update this method so that its implementation is not identical to "addTranscation" on line 24.(Ü®Ãøÿÿÿÿ8¼©—šü.
+[
+java:S1128"@Remove this unused import 'com.hotel.Service.LoginVerification'.(¦Àöõúÿÿÿÿ
+S	java:S1067"9Replace this use of System.out or System.err by a logger.(İ˜½…ùÿÿÿÿ
+e
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ğ˜î§úÿÿÿÿ
+V	java:S125$"<This block of commented-out lines of code should be removed.(ô¾‹Äıÿÿÿÿ
+e
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ÅÃ­¬ûÿÿÿÿ

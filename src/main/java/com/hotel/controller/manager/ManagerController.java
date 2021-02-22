@@ -22,10 +22,7 @@ public class ManagerController {
     ManageTranscation manageTranscation;
 
 
-    @RequestMapping(value = "/managerDashboard",method = RequestMethod.GET)
-    public String myHomePage(){
-        return "managerDashboard";
-    }
+
 
     @RequestMapping(value = "/managerRegistration")
     public String managerRegistration(){

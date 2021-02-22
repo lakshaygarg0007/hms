@@ -20,7 +20,7 @@ public class ManagerRegisterController {
         Pair<String,Boolean> pair= managerRegistrationVerification.verify(map);
         if(pair.getValue()){
             model.addAttribute("success",pair.getKey());
-            return "managerLogin";
+            return "newLogin";
         }
         else{
             model.addAttribute("error",pair.getKey());

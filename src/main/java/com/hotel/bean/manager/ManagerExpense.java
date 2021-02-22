@@ -1,5 +1,6 @@
 package com.hotel.bean.manager;
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -7,9 +8,9 @@ import java.util.Date;
 
 @Entity
 @NoArgsConstructor
-@IdClass(HotelIdSerialNumber.class)
+@Getter
 public class ManagerExpense {
-    @Id
+    @Column
     private String hotelId;
     @Id @GeneratedValue
     private int serialNumber;

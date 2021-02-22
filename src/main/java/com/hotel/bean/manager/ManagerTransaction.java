@@ -12,13 +12,12 @@ import java.util.Date;
 @Getter
 @Setter
 @AllArgsConstructor
-@IdClass(HotelIdSerialNumber.class)
 public class ManagerTransaction {
 
-    @Id
-    private String hotelId;
     @Id @GeneratedValue
     private int serialNumber;
+    @Column
+    private String hotelId;
     @Column
     Double transaction;
     @Column

@@ -21,11 +21,11 @@ public class CollectorRegistrationController {
         Pair<String,Boolean> pair= collectorRegistrationVerification.verify(map);
         if(pair.getValue()){
             model.addAttribute("success",pair.getKey());
-            return "managerLogin";
+            return "newLogin";
         }
         else{
             model.addAttribute("error",pair.getKey());
-            return "managerRegistration";
+            return "collectorRegistration";
         }
     }
 }

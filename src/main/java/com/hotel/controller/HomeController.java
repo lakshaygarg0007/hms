@@ -2,6 +2,7 @@ package com.hotel.controller;
 
 
 import com.hotel.Service.LoginVerification;
+import com.hotel.Service.manager.ManageTranscation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +16,9 @@ import java.text.ParseException;
 public class HomeController {
     @Autowired
     LoginVerification loginVerification;
-
+    @Autowired
+    ManageTranscation manageTranscation;
+    Double totalAmount=0.0;
 
     @RequestMapping(value = "/")
     public String index() {
@@ -40,13 +43,21 @@ public class HomeController {
     @RequestMapping(value = "/LoginVerification",method = RequestMethod.POST)
     public String verify(@RequestParam(value = "role")String role, @RequestParam(value = "userId")String userId, @RequestParam(value = "passwd")String passwd, Model model) {
         //System.out.println(role+" "+userId+" "+passwd);
+
         if(loginVerification.verifyAtLogin(role,userId,passwd)){
             if(role.equals("Manager"))
+            {
+                totalAmount=manageTranscation.fetchTotalAmount(userId);
+                model.addAttribute("hotelId",userId);
+                model.addAttribute("totalAmount",totalAmount);
                 return "managerDashboard";
-            else if(role.equals("Collector"))
-                return "collectorDashboard";
-            else
-                return "approverDashboard";
+            }
+            else if(role.equals("Collector")){
+                model.addAttribute("collectorId",userId);
+                return "collectorDashboard";}
+            else{
+                model.addAttribute("approverId",userId);
+                return "approverDashboard";}
         }
         else{
             model.addAttribute("invalid","Invalid Credentials");

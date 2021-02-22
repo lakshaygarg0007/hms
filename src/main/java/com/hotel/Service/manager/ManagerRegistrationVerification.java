@@ -1,16 +1,18 @@
 package com.hotel.Service.manager;
 
-import com.hotel.Repository.CollectorManagerRepository;
-import com.hotel.Repository.ManagerRegistrationRepository;
+import com.hotel.Repository.*;
+import com.hotel.bean.collector.CollectorEntity;
 import com.hotel.bean.collector.collectorHotel;
 import com.hotel.bean.manager.ManagerEntity;
+import com.hotel.bean.manager.ManagerExpense;
+import com.hotel.bean.manager.ManagerTransaction;
 import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.criteria.CriteriaBuilder;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 
@@ -20,6 +22,12 @@ public class ManagerRegistrationVerification {
     ManagerRegistrationRepository managerRegistrationRepository;
     @Autowired
     CollectorManagerRepository collectorManagerRepository;
+    @Autowired
+    CollectorRegistrationRepository collectorRegistrationRepository;
+    @Autowired
+    ManagerTransactionRepository managerTransactionRepository;
+    @Autowired
+    ManagerExpenseRepository managerExpenseRepository;
 
     public Pair<String,Boolean> verify(Map<String,String> map)
     {
@@ -41,15 +49,35 @@ public class ManagerRegistrationVerification {
         }
         else
         {
-            ManagerEntity managerEntity = new ManagerEntity(map.get("hotelId"), map.get("fname"), map.get("lname"), map.get("email"),map.get("cname") ,map.get("passwd"));
+            ManagerEntity managerEntity = new ManagerEntity(map.get("hotelId"), map.get("fname"), map.get("lname"), map.get("email"),map.get("cnumber") ,map.get("passwd"));
             managerRegistrationRepository.save(managerEntity);
+            String hotelId=map.get("hotelId");
             /*Pair<Integer,String> pair=AtStarting.q.peek();
             collectorHotel collectorHotel=new collectorHotel(pair.getValue(),map.get("hotelId"));
             collectorManagerRepository.save(collectorHotel);
             */
-            List<collectorHotel> managerCollectorTable = collectorManagerRepository.findAll();
-            String collectorId = managerCollectorTable.get(0).getCollectorID();
-            collectorHotel obj = new collectorHotel(collectorId , map.get("hotelID"));
+            List<CollectorEntity> list=collectorRegistrationRepository.findAll();
+            List<Pair<String , Integer>> pq=new ArrayList<>();
+            for(int i=0;i<list.size();i++){
+                String collectorId=list.get(i).getCollectorId();
+                System.out.println(collectorId);
+                int hotelsAssigned=collectorManagerRepository.findByCollectorID(collectorId).size();
+                System.out.println(hotelsAssigned);
+                pq.add(new Pair<>(collectorId,hotelsAssigned));
+            }
+            Collections.sort(pq, Comparator.comparing(p -> -p.getValue()));
+            Double cashAvailable=0.0;
+            List<ManagerTransaction> managerTransactionRepositories=managerTransactionRepository.findByHotelId(hotelId);
+            List<ManagerExpense> managerExpenses=managerExpenseRepository.findByHotelId(hotelId);
+            for(int i=0;i<managerTransactionRepositories.size();i++){
+                cashAvailable+=managerTransactionRepositories.get(i).getTransaction();
+                cashAvailable-=managerExpenses.get(i).getExpense();
+            }
+      //      List<Object[]> managerCollectorTable = collectorManagerRepository.findAllCollectors();
+       //     String collectorId =managerCollectorTable.get(0)[1].toString();
+      //      System.out.println(collectorId +"  "+managerCollectorTable.size()) ;
+
+            collectorHotel obj = new collectorHotel(pq.get(pq.size()-1).getKey(), hotelId,cashAvailable,0.0);
 //        PriorityQueue<Pair<Integer, String>> pq;
 //        for(int i = 0 ; i < managerCollectorTable.size() ; i++){
 //            pq.add(new Pair<Integer , String>(managerCollectorTable.get(i).getHotelId() , managerCollectorTable.get(i).getCollectorID()))
