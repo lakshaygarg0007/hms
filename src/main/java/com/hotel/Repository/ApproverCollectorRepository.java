@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface ApproverCollectorRepository extends CrudRepository<approverCollector,String> {
     List<approverCollector> findByApproverId(String approverId);
+    List<approverCollector> findByCollectorId(String collectorId);
 }

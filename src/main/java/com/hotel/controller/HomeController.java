@@ -1,6 +1,7 @@
 package com.hotel.controller;
 
 
+import com.hotel.Service.Collector.CollectorDashboard;
 import com.hotel.Service.LoginVerification;
 import com.hotel.Service.manager.ManageTranscation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.text.ParseException;
-
 @Controller
 public class HomeController {
     @Autowired
     LoginVerification loginVerification;
     @Autowired
     ManageTranscation manageTranscation;
+    @Autowired
+    CollectorDashboard collectorDashboard;
     Double totalAmount=0.0;
 
     @RequestMapping(value = "/")
@@ -53,7 +54,9 @@ public class HomeController {
                 return "managerDashboard";
             }
             else if(role.equals("Collector")){
+                totalAmount=collectorDashboard.fetchAmount(userId);
                 model.addAttribute("collectorId",userId);
+                model.addAttribute("totalAmount",totalAmount);
                 return "collectorDashboard";}
             else{
                 model.addAttribute("approverId",userId);

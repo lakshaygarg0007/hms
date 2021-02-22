@@ -34,7 +34,7 @@ public class ManagerDashboardControls {
         //System.out.println("heeeeeee");
         //JOptionPane.showMessageDialog(null, "My Goodness, this is so concise");
         totalAmount=manageTranscation.fetchTotalAmount(hotelId);
-        totalAmount += transaction;
+        //totalAmount += transaction;
         model.addAttribute("totalAmount", totalAmount);
         String succ = "Successfully Done!";
         model.addAttribute("succ",succ);
@@ -46,7 +46,7 @@ public class ManagerDashboardControls {
         model.addAttribute("hotelId",hotelId);
         managerExpenseService.addExpense(hotelId, expense, date);
         totalAmount=manageTranscation.fetchTotalAmount(hotelId);
-        totalAmount -= expense;
+        //totalAmount -= expense;
         model.addAttribute("totalAmount", totalAmount);
         String su = "Expense Successfully Added!";
         model.addAttribute("su", su);
@@ -72,13 +72,30 @@ public class ManagerDashboardControls {
     public String transcationHistory(@RequestParam(value = "hotelId")String hotelId,@RequestParam(value = "startingDate")@DateTimeFormat(pattern = "yyyy-MM-dd")Date startingDate, @RequestParam(value = "endingDate")@DateTimeFormat(pattern = "yyyy-MM-dd")Date endingDate, Model model)
     {
         List<ManagerTransaction> list=manageTranscation.transactionHistory(hotelId,startingDate,endingDate);
-        model.addAttribute("list",list);
+        model.addAttribute("transaction",list);
+        totalAmount=manageTranscation.fetchTotalAmount(hotelId);
+        model.addAttribute("totalAmount", totalAmount);
+
         //System.out.println(list.size());
         String c1 = "Amount";
         model.addAttribute("c1", c1);
         String c2 = "Date";
         model.addAttribute("c2", c2);
        return "managerDashboard";
+    }
+    @RequestMapping(value="/expenseHistory",method = RequestMethod.POST)
+    public String expenseHistory(@RequestParam(value = "hotelId")String hotelId,@RequestParam(value = "startingDate")@DateTimeFormat(pattern = "yyyy-MM-dd")Date startingDate, @RequestParam(value = "endingDate")@DateTimeFormat(pattern = "yyyy-MM-dd")Date endingDate, Model model)
+    {
+        List<ManagerExpense> list=managerExpenseService.expenseHistory(hotelId,startingDate,endingDate);
+        model.addAttribute("expense",list);
+        totalAmount=manageTranscation.fetchTotalAmount(hotelId);
+        model.addAttribute("totalAmount", totalAmount);
+        //System.out.println(list.size());
+        String c1 = "Amount";
+        model.addAttribute("c1", c1);
+        String c2 = "Date";
+        model.addAttribute("c2", c2);
+        return "managerDashboard";
     }
 
 

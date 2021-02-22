@@ -107,20 +107,6 @@
                                     </div>
                                 </div>
                                 <br>
-                                <!--<div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label>From:</label>
-                                        <input placeholder="Select date" type="text" id="datepicker1" name="startingDate" class="form-control datepicker">
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label>To:</label>
-                                        <input placeholder="Select date" type="text" id="datepicker2" name="endingDate" class="form-control datepicker">
-
-                                    </div>
-                                </div>-->
                             </div>
                             <!--                                                                <button type="submit"  class="btn btn-primary">Submit</button>-->
                             <input type="submit" placeholder="Show Hotels">
@@ -135,14 +121,15 @@
                                 </thead>
 
                                 <tbody>
+                                <form>
                                 <tr th:each="i : ${list}">
-                    x                <td><span th:text="${i.hotelId}"> Title </span></td>
+                                    <td><span th:text="${i.hotelId}" > Title </span></td>
                                     <td><input type="text" name="amount" placeholder="Enter Amount"></td>
-                                    <td><span th:text="${i.cashAvaliable}"></span></td>
+                                    <td><span th:text="${i.cashAvaliable}" ></span></td>
                                     <td><span th:text="${i.cashCollected}"></span></td>
-                                    <td><input type="button" onclick="collectCash" placeholder="Collect Cash" value="Collect Cash"></td>
+                                    <td><input type="button" formaction="/collectCash"  placeholder="Collect Cash" value="Collect Cash"></td>
                                 </tr>
-
+                                </form>
                                 </tbody>
 
                             </table>

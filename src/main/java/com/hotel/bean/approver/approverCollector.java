@@ -19,4 +19,5 @@ public class approverCollector {
     String collectorId;
     @Column
     String approverId;
+
 }

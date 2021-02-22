@@ -1,4 +1,4 @@
-package com.hotel.Service.Collector;
+package com.hotel.Service.approver;
 
 import com.hotel.Repository.ApproverRegistrationRepository;
 import com.hotel.Repository.CollectorRegistrationRepository;

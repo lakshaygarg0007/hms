@@ -1,7 +1,9 @@
 package com.hotel.Service.manager;
 
+import com.hotel.Repository.CollectorCollectionsRepository;
 import com.hotel.Repository.ManagerExpenseRepository;
 import com.hotel.Repository.ManagerTransactionRepository;
+import com.hotel.bean.collector.CollectorCollection;
 import com.hotel.bean.manager.ManagerExpense;
 import com.hotel.bean.manager.ManagerTransaction;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,8 @@ public class ManageTranscation {
 
     @Autowired
     ManagerExpenseRepository managerExpenseRepository;
+    @Autowired
+    CollectorCollectionsRepository collectorCollectionsRepository;
 
 
     ManagerTransaction managerDashboard=new ManagerTransaction();
@@ -40,12 +44,17 @@ public class ManageTranscation {
         Double totolAmount=0.0;
         List<ManagerTransaction> manageTranscations=managerTransactionRepository.findByHotelId(hotelId);
         List<ManagerExpense> managerExpenses=managerExpenseRepository.findByHotelId(hotelId);
+        List<CollectorCollection> collectorCollections=collectorCollectionsRepository.findByHotelId(hotelId);
         for(int i=0;i<manageTranscations.size();i++){
             totolAmount+=manageTranscations.get(i).getTransaction();
         }
         for(int i=0;i<managerExpenses.size();i++){
             totolAmount-=managerExpenses.get(i).getExpense();
         }
+        for(int i=0;i<collectorCollections.size();i++){
+            totolAmount-=collectorCollections.get(i).getAmount();
+        }
+
         return totolAmount;
     }
 

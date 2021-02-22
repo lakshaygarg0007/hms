@@ -1,6 +1,7 @@
 package com.hotel.Service.manager;
 
 import com.hotel.Repository.*;
+import com.hotel.bean.collector.CollectorCollection;
 import com.hotel.bean.collector.CollectorEntity;
 import com.hotel.bean.collector.collectorHotel;
 import com.hotel.bean.manager.ManagerEntity;
@@ -28,6 +29,8 @@ public class ManagerRegistrationVerification {
     ManagerTransactionRepository managerTransactionRepository;
     @Autowired
     ManagerExpenseRepository managerExpenseRepository;
+    @Autowired
+    CollectorCollectionsRepository collectorCollectionsRepository;
 
     public Pair<String,Boolean> verify(Map<String,String> map)
     {
@@ -71,7 +74,9 @@ public class ManagerRegistrationVerification {
             List<ManagerExpense> managerExpenses=managerExpenseRepository.findByHotelId(hotelId);
             for(int i=0;i<managerTransactionRepositories.size();i++){
                 cashAvailable+=managerTransactionRepositories.get(i).getTransaction();
-                cashAvailable-=managerExpenses.get(i).getExpense();
+            }
+            for(int i=0;i<managerExpenses.size();i++){
+                cashAvailable-= managerExpenses.get(i).getExpense();
             }
       //      List<Object[]> managerCollectorTable = collectorManagerRepository.findAllCollectors();
        //     String collectorId =managerCollectorTable.get(0)[1].toString();

@@ -100,7 +100,7 @@
                         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                                 <a class="nav-link active" id="addpro-tab" data-toggle="pill" href="#addpro" role="tab"  aria-selected="true">Add Transaction</a><br>
                                 <a class="nav-link" id="addexpen-tab" data-toggle="pill" href="#addexpen" role="tab"  aria-selected="false">Add Expanse</a><br>
-                                <a class="nav-link" id="remamt-tab" data-toggle="pill" href="#remamt" role="tab"  aria-selected="false">Remaining Amount</a><br>
+                               <!-- <a class="nav-link" id="remamt-tab" data-toggle="pill" href="#remamt" role="tab"  aria-selected="false">Remaining Amount</a><br>-->
                                 <a class="nav-link" id="history-tab" data-toggle="pill" href="#history" role="tab"  aria-selected="false">Transaction History</a><br>
                         </div>
                 </div>
@@ -184,9 +184,11 @@
                                                                 </div>
                                                         </div>
                                                         <!--                                                                <button type="submit"  class="btn btn-primary">Submit</button>-->
-                                                        <input type="submit" placeholder="SUBMIT">
+                                                        <input type="submit" value="SHOW TRANSACTION HISTORY">  <pre></pre>
+                                                        <input type="submit" value="SHOW EXPENSE HISTORY" formaction="/expenseHistory">
                                                 </form>
                                                 <div>
+
                                                         <table class="table">
                                                                 <thead class="thead-dark">
                                                                 <th th:text="${c1}"></th>
@@ -194,8 +196,16 @@
                                                                 </thead>
 
                                                                 <tbody>
-                                                                <tr th:each="i : ${list}">
+                                                                <tr th:each="i : ${transaction}">
                                                                         <td><span th:text="${i.transaction}"> Title </span></td>
+                                                                        <td><span th:text="${#dates.format(i.date, 'dd-MM-yyyy')}"></span></td>
+                                                                </tr>
+                                                                </tbody>
+
+
+                                                                <tbody>
+                                                                <tr th:each="i : ${expense}">
+                                                                        <td><span th:text="${i.expense}"> Title </span></td>
                                                                         <td><span th:text="${#dates.format(i.date, 'dd-MM-yyyy')}"></span></td>
                                                                 </tr>
                                                                 </tbody>
