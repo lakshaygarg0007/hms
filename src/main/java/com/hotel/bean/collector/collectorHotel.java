@@ -19,8 +19,4 @@ public class collectorHotel {
     String collectorID;
     @Id
     String hotelId;
-    @Column
-    Double cashAvaliable;
-    @Column
-    Double cashCollected;
 }

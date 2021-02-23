@@ -73,8 +73,10 @@ public class ApproverRegistration {
 
     @RequestMapping(value = "/showRequests",method = RequestMethod.POST)
     public String showRequets(@RequestParam(value = "approverId")String approverId,Model model){
-        List<CollectorCollection> list=approverDashboardService.showRequest("approverId");
+        System.out.println(approverId+" heelo");
+        List<CollectorCollection> list=approverDashboardService.showRequest(approverId);
         model.addAttribute("list",list);
+        System.out.println("list size"+list.size());
         model.addAttribute("c1","Pending Requests");
         model.addAttribute("cId","Collector Id");
         model.addAttribute("amount","Amount");
@@ -83,10 +85,11 @@ public class ApproverRegistration {
     }
 
     @RequestMapping(value = "/acceptRequest",method = RequestMethod.POST)
-    public String acceptRequest(@RequestParam(value = "approverId") String approverId,@RequestParam(value = "serialNumber")int serialNumber,@RequestParam(value = "collectorId")String collectorId,@RequestParam(value = "amount")Double amount){
-        String hotelId=collectorHotelRepository.findByCollectorID(collectorId).get(0).getHotelId();
+    public String acceptRequest(@RequestParam(value = "approverId") String approverId,@RequestParam(value = "serialNumber")int serialNumber,@RequestParam(value = "collectorId")String collectorId,@RequestParam(value = "amount")Double amount,Model model){
+        String hotelId=collectorCollectionsRepository.findBySerialNumber(serialNumber).get(0).getHotelId();
         CollectorCollection collectorCollection=new CollectorCollection(serialNumber,hotelId,collectorId,approverId,amount,true);
         collectorCollectionsRepository.save(collectorCollection);
+        model.addAttribute("approverId",approverId);
         return "approverDashboard";
     }
 

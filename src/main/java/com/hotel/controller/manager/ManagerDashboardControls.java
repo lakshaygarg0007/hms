@@ -73,6 +73,7 @@ public class ManagerDashboardControls {
     {
         List<ManagerTransaction> list=manageTranscation.transactionHistory(hotelId,startingDate,endingDate);
         model.addAttribute("transaction",list);
+        model.addAttribute("hotelId",hotelId);
         totalAmount=manageTranscation.fetchTotalAmount(hotelId);
         model.addAttribute("totalAmount", totalAmount);
 
@@ -89,6 +90,7 @@ public class ManagerDashboardControls {
         List<ManagerExpense> list=managerExpenseService.expenseHistory(hotelId,startingDate,endingDate);
         model.addAttribute("expense",list);
         totalAmount=manageTranscation.fetchTotalAmount(hotelId);
+        model.addAttribute("hotelId",hotelId);
         model.addAttribute("totalAmount", totalAmount);
         //System.out.println(list.size());
         String c1 = "Amount";

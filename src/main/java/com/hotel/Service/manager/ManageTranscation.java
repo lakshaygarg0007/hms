@@ -48,12 +48,15 @@ public class ManageTranscation {
         for(int i=0;i<manageTranscations.size();i++){
             totolAmount+=manageTranscations.get(i).getTransaction();
         }
+        System.out.println(totolAmount);
         for(int i=0;i<managerExpenses.size();i++){
             totolAmount-=managerExpenses.get(i).getExpense();
         }
+        System.out.println(totolAmount);
         for(int i=0;i<collectorCollections.size();i++){
             totolAmount-=collectorCollections.get(i).getAmount();
         }
+        System.out.println(totolAmount);
 
         return totolAmount;
     }

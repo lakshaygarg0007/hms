@@ -79,7 +79,7 @@
         <nav class="navbar navbar-light bg-light">
                 <ul class="navbar-nav">
                         <li class="nav-item">
-                                <h2>DashBoard</h2>
+                                <h2>Welcome Manager</h2>
                         </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right ml-auto">
@@ -160,22 +160,21 @@
                                 <div class="tab-pane fade" id="history" role="tabpanel"  aria-labelledby="history-tab" >
                                         <div class="container">
                                                 <form action="/transactionHistory" method="post">
-                                                        <div class="row">
+                                                        <div >
                                                                 <div class="form-group">
                                                                         <div class="form-group">
                                                                                 <label>Hotel-ID</label>
                                                                                 <input type="text" name="hotelId" class="form-control" th:value="${hotelId}" placeholder="Hotel-Id" readonly>
                                                                         </div>
                                                                 </div>
-                                                                <br>
-                                                                <div class="col-lg-6">
+                                                                <div>
                                                                         <div class="form-group">
                                                                                 <label>From:</label>
                                                                                 <input placeholder="Select date" type="text" id="datepicker1" name="startingDate" class="form-control datepicker">
 
                                                                         </div>
                                                                 </div>
-                                                                <div class="col-lg-6">
+                                                                <div>
                                                                         <div class="form-group">
                                                                                 <label>To:</label>
                                                                                 <input placeholder="Select date" type="text" id="datepicker2" name="endingDate" class="form-control datepicker">
@@ -187,37 +186,40 @@
                                                         <input type="submit" value="SHOW TRANSACTION HISTORY">  <pre></pre>
                                                         <input type="submit" value="SHOW EXPENSE HISTORY" formaction="/expenseHistory">
                                                 </form>
-                                                <div>
 
-                                                        <table class="table">
-                                                                <thead class="thead-dark">
-                                                                <th th:text="${c1}"></th>
-                                                                <th th:text="${c2}"></th>
-                                                                </thead>
-
-                                                                <tbody>
-                                                                <tr th:each="i : ${transaction}">
-                                                                        <td><span th:text="${i.transaction}"> Title </span></td>
-                                                                        <td><span th:text="${#dates.format(i.date, 'dd-MM-yyyy')}"></span></td>
-                                                                </tr>
-                                                                </tbody>
-
-
-                                                                <tbody>
-                                                                <tr th:each="i : ${expense}">
-                                                                        <td><span th:text="${i.expense}"> Title </span></td>
-                                                                        <td><span th:text="${#dates.format(i.date, 'dd-MM-yyyy')}"></span></td>
-                                                                </tr>
-                                                                </tbody>
-
-                                                        </table>
-                                                </div>
 
                                         </div>
                                 </div>
 
                         </div>
                 </div>
+        </div>
+        <br>
+        <br>
+        <div>
+
+                <table class="table">
+                        <thead class="thead-dark">
+                        <th th:text="${c1}"></th>
+                        <th th:text="${c2}"></th>
+                        </thead>
+
+                        <tbody>
+                        <tr th:each="i : ${transaction}">
+                                <td><span th:text="${i.transaction}"></span></td>
+                                <td><span th:text="${#dates.format(i.date, 'dd-MM-yyyy')}"></span></td>
+                        </tr>
+                        </tbody>
+
+
+                        <tbody>
+                        <tr th:each="i : ${expense}">
+                                <td><span th:text="${i.expense}"></span></td>
+                                <td><span th:text="${#dates.format(i.date, 'dd-MM-yyyy')}"></span></td>
+                        </tr>
+                        </tbody>
+
+                </table>
         </div>
 
 </div>

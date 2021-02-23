@@ -82,7 +82,7 @@ public class ManagerRegistrationVerification {
        //     String collectorId =managerCollectorTable.get(0)[1].toString();
       //      System.out.println(collectorId +"  "+managerCollectorTable.size()) ;
 
-            collectorHotel obj = new collectorHotel(pq.get(pq.size()-1).getKey(), hotelId,cashAvailable,0.0);
+            collectorHotel obj = new collectorHotel(pq.get(pq.size()-1).getKey(), hotelId);
 //        PriorityQueue<Pair<Integer, String>> pq;
 //        for(int i = 0 ; i < managerCollectorTable.size() ; i++){
 //            pq.add(new Pair<Integer , String>(managerCollectorTable.get(i).getHotelId() , managerCollectorTable.get(i).getCollectorID()))
