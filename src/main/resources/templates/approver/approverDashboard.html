@@ -171,16 +171,17 @@
         <tbody>
             <tr th:each="i : ${list}">
                 <form action="/acceptRequest" method="post">
-                <input type="text" name="approverId" class="form-control" th:value="${approverId}" placeholder="Approver-Id" readonly>
-                <td><input type="text"  name="serialNumber" th:value="${i.serialNumber}">  </input></td>
-                <td><input type="text"  name="collectorId" th:value="${i.collectorId}">  </input></td>
-                <td><input type="text"  name="amount" th:value="${i.amount}"></input></td>
+                <input type="hidden" name="approverId" class="form-control" th:value="${approverId}" placeholder="Approver-Id" readonly>
+                <td><input type="text"  name="serialNumber" th:value="${i.serialNumber}" readonly>  </input></td>
+                <td><input type="text"  name="collectorId" th:value="${i.collectorId}" readonly>  </input></td>
+                <td><input type="text"  name="amount" th:value="${i.amount}" readonly></input></td>
                 <td><input type="submit"  placeholder="Approve Request" value="Approve Request"></td>
                 </form>
             </tr>
         </tbody>
-
     </table>
+    <div th:text="${error}" style="color: red;font-size: 20px;font-weight: bold;"></div>
+    <div th:text="${success}" style="color: green;font-size: 20px;font-weight: bold;"></div>
 </div>
 
 

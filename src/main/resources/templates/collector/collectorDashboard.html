@@ -132,16 +132,16 @@
 
             <tr th:each="collector : ${collectorsList}">
                 <form action="/collectCash" method="post" >
-                    <input type="text" name="collectorId" class="form-control" th:value="${collectorId}" placeholder="Collector-Id" readonly>
+                    <input type="hidden" name="collectorId" class="form-control" th:value="${collectorId}" placeholder="Collector-Id" readonly>
                 <td>
-                    <input type="text"    name="hotelId" th:value="${collector.getKey()}" >
+                    <input type="text"    name="hotelId" th:value="${collector.getKey()}" readonly >
                 </td>
                 <td>
                     <input type="text"  name="amount" placeholder="Enter Amount" >
                 </td>
 
                 <td>
-                    <input  type="text"  th:value="${collector.getValue()}" name="amountAvailable"  >
+                    <input  type="text"  th:value="${collector.getValue()}" name="amountAvailable" readonly >
                 </td>
 
                 <td>

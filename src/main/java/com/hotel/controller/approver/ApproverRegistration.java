@@ -3,12 +3,14 @@ package com.hotel.controller.approver;
 import com.hotel.Repository.*;
 import com.hotel.Service.approver.ApproverRegistrationVerification;
 import com.hotel.Service.approver.ApproverDashboardService;
+import com.hotel.Service.manager.ManageTranscation;
 import com.hotel.Service.manager.ManagerRegistrationVerification;
 import com.hotel.bean.approver.approverCollector;
 import com.hotel.bean.approver.approverRequests;
 import com.hotel.bean.collector.CollectorCollection;
 import com.hotel.bean.collector.collectorHotel;
 import com.hotel.bean.manager.ManagerExpense;
+import com.hotel.bean.manager.ManagerTransaction;
 import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -71,6 +73,8 @@ public class ApproverRegistration {
 
     @Autowired
     ApproverDashboardService approverDashboardService;
+    @Autowired
+    ManageTranscation managerTransaction;
 
     @RequestMapping(value = "/showRequests",method = RequestMethod.POST)
     public String showRequets(@RequestParam(value = "approverId")String approverId,Model model){
@@ -89,12 +93,19 @@ public class ApproverRegistration {
     @RequestMapping(value = "/acceptRequest",method = RequestMethod.POST)
     public String acceptRequest(@RequestParam(value = "approverId") String approverId,@RequestParam(value = "serialNumber")int serialNumber,@RequestParam(value = "collectorId")String collectorId,@RequestParam(value = "amount")Double amount,Model model){
         String hotelId=collectorCollectionsRepository.findBySerialNumber(serialNumber).get(0).getHotelId();
-        CollectorCollection collectorCollection=new CollectorCollection(serialNumber,hotelId,collectorId,approverId,amount,true);
-        collectorCollectionsRepository.save(collectorCollection);
+
+        Double amountAvailable=managerTransaction.fetchTotalAmount(hotelId);
+       if(amountAvailable>=amount){
+           model.addAttribute("success","Request Accepted Successfully");
+           CollectorCollection collectorCollection=new CollectorCollection(serialNumber,hotelId,collectorId,approverId,amount,true);
+           collectorCollectionsRepository.save(collectorCollection);
+       }
+       else{
+           model.addAttribute("error","Not Enough Cash Available");
+       }
         model.addAttribute("approverId",approverId);
         return "approverDashboard";
     }
 
-
-
+    
 }
