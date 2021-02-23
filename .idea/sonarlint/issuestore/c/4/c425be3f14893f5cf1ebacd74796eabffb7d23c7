@@ -1,0 +1,30 @@
+
+e
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ÅÃ­¬ûÿÿÿÿ
+Z	java:S106""9Replace this use of System.out or System.err by a logger.(•åýäúÿÿÿÿ8˜ï°óü.
+g
+java:S4488j"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ø½ ”8˜ï°óü.
+]	java:S1254"<This block of commented-out lines of code should be removed.(Ò§ºûÿÿÿÿ8˜ï°óü.
+l
+java:S4488Y"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(²Ë€ÿüÿÿÿÿ8˜ï°óü.
+V	java:S125<"<This block of commented-out lines of code should be removed.(ô¾‹Äýÿÿÿÿ
+U	java:S106r"9Replace this use of System.out or System.err by a logger.(²¨ç÷8¤—«÷ü.
+i
+java:S1192)"LDefine a constant instead of duplicating this literal "totalAmount" 5 times.(úùØÝ8˜ï°óü.
+`
+java:S4488C"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ã§Œˆ
+]	java:S125("<This block of commented-out lines of code should be removed.(ö±–ëýÿÿÿÿ8˜ï°óü.
+j
+java:S1192#"HDefine a constant instead of duplicating this literal "hotelId" 5 times.(¦˜ãÖþÿÿÿÿ8˜ï°óü.
+e
+java:S4488/"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ð˜î§úÿÿÿÿ
+s
+java:S1192,"QDefine a constant instead of duplicating this literal "managerDashboard" 5 times.(Ûî’Ùùÿÿÿÿ8˜ï°óü.
+]	java:S125a"<This block of commented-out lines of code should be removed.(Þ‹·©üÿÿÿÿ8£Äµóü.
+]	java:S125 "<This block of commented-out lines of code should be removed.(¬á·êøÿÿÿÿ8˜ï°óü.
+[
+java:S1128"@Remove this unused import 'com.hotel.Service.LoginVerification'.(¦Àöõúÿÿÿÿ
+X	java:S125%"<This block of commented-out lines of code should be removed.(÷²Å„8˜ï°óü.
+X	java:S125q"<This block of commented-out lines of code should be removed.(¥×Äø8•‚ßõü.
+`
+java:S4488J"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ªÖÓ¸

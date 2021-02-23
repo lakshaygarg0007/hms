@@ -1,0 +1,11 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ£™8¦τ•σό.
+c
+java:S1128
+"ARemove this unused import 'com.hotel.bean.manager.ManagerEntity'.(†ΣΫΘόÿÿÿÿ8¦τ•σό.
+]	java:S125"<This block of commented-out lines of code should be removed.(ϋΏτώÿÿÿÿ8¦τ•σό.
+U	java:S1065"9Replace this use of System.out or System.err by a logger.(ΒΪ›Β8¦τ•σό.
+U	java:S106."9Replace this use of System.out or System.err by a logger.(ΔπΝ™8¦τ•σό.
+Z	java:S1067"9Replace this use of System.out or System.err by a logger.(δΆεƒϊÿÿÿÿ8¦τ•σό.
+a
+java:S1128	"DRemove this unused import 'com.hotel.bean.collector.collectorHotel'.(λ‘Ή8¦τ•σό.

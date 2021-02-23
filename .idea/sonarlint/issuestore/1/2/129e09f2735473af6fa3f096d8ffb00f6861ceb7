@@ -1,0 +1,7 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ£™8¥τ•σό.
+T
+java:S1128"7Remove this unused import 'java.text.SimpleDateFormat'.(ϊ΅ΩΫ8¥τ•σό.
+G
+java:S5411&"*Use the primitive boolean expression here.(ντΓί8¥τ•σό.
+m	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(λΖΆ8¥τ•σό.
