@@ -14,5 +14,4 @@ public interface ManagerTransactionRepository extends CrudRepository<ManagerTran
     List<ManagerTransaction> findByHotelIdAndDateBetween(String hotelId,Date starting,Date ending);
    List<ManagerTransaction> findByHotelId(String hotelId);
 
-
 }

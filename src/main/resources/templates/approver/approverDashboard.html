@@ -111,24 +111,7 @@
                             </div>
                             <input type="submit" placeholder="Show Collectors">
                         </form>
-                        <div>
-                            <table class="table">
-                                <thead class="thead-dark">
-                                <th th:text="${c1}"></th>
-                                <!--<th>Amount</th>-->
-                                <!--<th th:text="${c2}"></th>-->
-                               <!-- <th>Cash Collected</th>-->
-                                </thead>
 
-                                <tbody>
-                                <tr th:each="i : ${collectors}">
-                                    <td><span th:text="${i.collectorId}"> Title </span></td>
-                                </tr>
-
-                                </tbody>
-
-                            </table>
-                        </div>
 
                     </div>
                 </div>
@@ -147,28 +130,7 @@
                             </div>
                             <input type="submit" placeholder="Show Pending Requests">
                         </form>
-                        <div>
-                            <table class="table">
-                                <thead class="thead-dark">
-                                <th>Serial Number</th>
-                                <th th:text="${cId}"></th>
-                                <th th:text="${amount}"></th>
-                                </thead>
 
-                                <tbody>
-                                <form action="/acceptRequest" method="post">
-                                <tr th:each="i : ${list}">
-                                    <input type="text" name="approverId" class="form-control" th:value="${approverId}" placeholder="Approver-Id" readonly>
-                                    <td><input type="text"  name="serialNumber" th:value="${i.serialNumber}">  </input></td>
-                                    <td><input type="text"  name="collectorId" th:value="${i.collectorId}">  </input></td>
-                                    <td><input type="text"  name="amount" th:value="${i.amount}"></input></td>
-                                    <td><input type="submit"  placeholder="Approve Request" value="Approve Request"></td>
-                                </tr>
-                                </form>
-                                </tbody>
-
-                            </table>
-                        </div>
 
                     </div>
                 </div>
@@ -178,6 +140,49 @@
             </div>
         </div>
     </div>
+<br><br>
+<div>
+    <table class="table">
+        <thead class="thead-dark">
+        <th th:text="${c1}"></th>
+        <!--<th>Amount</th>-->
+        <!--<th th:text="${c2}"></th>-->
+        <!-- <th>Cash Collected</th>-->
+        </thead>
+
+        <tbody>
+        <tr th:each="i : ${collectors}">
+            <td><span th:text="${i.collectorId}"> Title </span></td>
+        </tr>
+
+        </tbody>
+
+    </table>
+</div>
+<br><br>
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+        <th th:text="${serialNumber}"></th>
+        <th th:text="${cId}"></th>
+        <th th:text="${amount}"></th>
+        </thead>
+
+        <tbody>
+            <tr th:each="i : ${list}">
+                <form action="/acceptRequest" method="post">
+                <input type="text" name="approverId" class="form-control" th:value="${approverId}" placeholder="Approver-Id" readonly>
+                <td><input type="text"  name="serialNumber" th:value="${i.serialNumber}">  </input></td>
+                <td><input type="text"  name="collectorId" th:value="${i.collectorId}">  </input></td>
+                <td><input type="text"  name="amount" th:value="${i.amount}"></input></td>
+                <td><input type="submit"  placeholder="Approve Request" value="Approve Request"></td>
+                </form>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+
 
 </div>
 

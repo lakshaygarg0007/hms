@@ -16,6 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import sun.security.x509.SerialNumber;
 
 import java.text.ParseException;
 import java.util.Date;
@@ -79,6 +80,7 @@ public class ApproverRegistration {
         System.out.println("list size"+list.size());
         model.addAttribute("c1","Pending Requests");
         model.addAttribute("cId","Collector Id");
+        model.addAttribute("serialNumber", "Serial Number");
         model.addAttribute("amount","Amount");
         model.addAttribute("approverId",approverId);
         return "approverDashboard";

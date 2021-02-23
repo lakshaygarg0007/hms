@@ -79,7 +79,7 @@
         <nav class="navbar navbar-light bg-light">
                 <ul class="navbar-nav">
                         <li class="nav-item">
-                                <h2>DashBoard</h2>
+                                <h2>Welcome Manager</h2>
                         </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right ml-auto">
@@ -200,17 +200,28 @@
 
                 <table class="table">
                         <thead class="thead-dark">
+                        <th></th>
                         <th th:text="${c1}"></th>
                         <th th:text="${c2}"></th>
+                        <th th:text="${c3}"></th>
+                        <th th:text="${c4}"></th>
+                        <th th:text="${c5}"></th>
                         </thead>
 
                         <tbody>
-                        <tr th:each="i : ${transaction}">
-                                <td><span th:text="${i.transaction}"></span></td>
-                                <td><span th:text="${#dates.format(i.date, 'dd-MM-yyyy')}"></span></td>
-                        </tr>
+                                <tr th:each="i : ${transaction}">
+                                        <form method="post" action="/deleteTransaction">
+                                                <td><input  name="hotelId" th:value="${hotelId}" type="hidden"></td>
+                                                <td><input type="text" name="serialNumber" th:value="${i.serialNumber}" readonly></td>
+                                                <td><input type="text" name="transaction" th:value="${i.transaction}" ></td>
+                                                <td><input type="text" name="date"  id="datepicker5" class="form-control datepicker"></td>
+                                                <!--<td><input type="submit" name="action" value="Delete Record" ></td>-->
+                                                <td><input type="submit" name="action" value="Update Record"></td>
+                                        </form>
+                                </tr>
                         </tbody>
-
+                        <div th:text="${deletelabel}"></div>
+                        <div th:text="${updatelabel}"></div>
 
                         <tbody>
                         <tr th:each="i : ${expense}">
@@ -250,10 +261,11 @@
 </script>
 
 <script type="text/javascript">
-        $("#datepicker1").datepicker({format: 'yyyy-mm-dd'});
-        $("#datepicker2").datepicker({format: 'yyyy-mm-dd'});
-        $("#datepicker3").datepicker({format: 'yyyy-mm-dd'});
-        $("#datepicker4").datepicker({format: 'yyyy-mm-dd'});
+        $("#datepicker1").datepicker({format: 'yyyy-mm-dd',maxDate:new Date(),defaultDate: new Date()});
+        $("#datepicker2").datepicker({format: 'yyyy-mm-dd',maxDate:new Date()});
+        $("#datepicker3").datepicker({format: 'yyyy-mm-dd',maxDate:new Date()});
+        $("#datepicker4").datepicker({format: 'yyyy-mm-dd',maxDate:new Date()});
+        $("#datepicker5").datepicker({format: 'yyyy-mm-dd',maxDate:new Date(),defaultDate: new Date()});
 </script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

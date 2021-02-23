@@ -1,5 +1,6 @@
 package com.hotel.controller.manager;
 
+import com.hotel.Repository.ManagerTransactionRepository;
 import com.hotel.Service.manager.ManageTranscation;
 import com.hotel.Service.LoginVerification;
 import com.hotel.Service.manager.ManagerExpenseService;
@@ -22,6 +23,8 @@ public class ManagerDashboardControls {
     ManageTranscation manageTranscation;
     @Autowired
     ManagerExpenseService managerExpenseService;
+    @Autowired
+    ManagerTransactionRepository managerTransactionRepository;
     Double totalAmount=0.0;
 
     @RequestMapping(value = "/addTransaction",method = RequestMethod.POST)
@@ -76,12 +79,11 @@ public class ManagerDashboardControls {
         model.addAttribute("hotelId",hotelId);
         totalAmount=manageTranscation.fetchTotalAmount(hotelId);
         model.addAttribute("totalAmount", totalAmount);
-
-        //System.out.println(list.size());
-        String c1 = "Amount";
-        model.addAttribute("c1", c1);
-        String c2 = "Date";
-        model.addAttribute("c2", c2);
+        model.addAttribute("c1", "Serial Number");
+        model.addAttribute("c2", "Amount");
+        model.addAttribute("c3","Date");
+        model.addAttribute("c4","Delete Record");
+        model.addAttribute("c5","Update Record");
        return "managerDashboard";
     }
     @RequestMapping(value="/expenseHistory",method = RequestMethod.POST)
@@ -92,13 +94,32 @@ public class ManagerDashboardControls {
         totalAmount=manageTranscation.fetchTotalAmount(hotelId);
         model.addAttribute("hotelId",hotelId);
         model.addAttribute("totalAmount", totalAmount);
-        //System.out.println(list.size());
-        String c1 = "Amount";
-        model.addAttribute("c1", c1);
-        String c2 = "Date";
-        model.addAttribute("c2", c2);
+        model.addAttribute("totalAmount", totalAmount);
+        model.addAttribute("c1", "Serial Number");
+        model.addAttribute("c2", "Amount");
+        model.addAttribute("c3","Date");
+        model.addAttribute("c4","Delete Record");
+        model.addAttribute("c5","Update Record");
         return "managerDashboard";
     }
+
+    @RequestMapping(value = "/deleteTransaction",method = RequestMethod.POST)
+    public String deleteTransaction(@RequestParam(value = "serialNumber")int serialNumber,@RequestParam(value = "hotelId")String hotelId,@RequestParam String action,@RequestParam(value = "transaction")Double transaction,@RequestParam(value = "date")@DateTimeFormat(pattern = "yyyy-MM-dd")Date sdate,Model model){
+       if(action.equals("Delete Record")){
+        managerTransactionRepository.deleteById(serialNumber);
+        model.addAttribute("hotelId",hotelId);
+        model.addAttribute("totalAmount", totalAmount);
+        model.addAttribute("deletelabel","Record Deleted Successfully");}
+       else if(action.equals("Update Record")){
+           List<ManagerTransaction> managerTransactions=managerTransactionRepository.findByHotelId(hotelId);
+           ManagerTransaction managerTransaction=new ManagerTransaction(serialNumber,hotelId,transaction,sdate,false);
+           managerTransactionRepository.save(managerTransaction);
+           model.addAttribute("updatelabel","Record Updated Successfully");
+       }
+        return "managerDashboard";
+    }
+
+
 
 
 

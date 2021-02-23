@@ -61,6 +61,7 @@ public class CollectorDashboardController {
 
         model.addAttribute("collectorsList",collectorsList);
         model.addAttribute("c1","Hotels ");
+        model.addAttribute("amount","Amount");
         model.addAttribute("c2","cashAvailable");
         model.addAttribute("c3","cashCollected");
         return "collectorDashboard";
@@ -73,8 +74,12 @@ public class CollectorDashboardController {
         model.addAttribute("totalAmount",totalamount);
         String approverId=approverCollectorRepository.findByCollectorId(collectorId).get(0).getApproverId();
         if(tobecollected<amountAvailable){
+            model.addAttribute("success","Request Sent to Approver");
         CollectorCollection collectorCollection=new CollectorCollection(hotelId,collectorId,approverId,tobecollected,false);
         collectorCollectionsRepository.save(collectorCollection);}
+        else{
+            model.addAttribute("error","Invalid Amount Choosen");
+        }
         return "collectorDashboard";
     }
 
