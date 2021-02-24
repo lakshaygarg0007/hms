@@ -3,6 +3,7 @@ package com.hotel.controller;
 
 import com.hotel.Service.Collector.CollectorDashboardService;
 import com.hotel.Service.LoginVerificationService;
+import com.hotel.Service.manager.ManagerDashboardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +16,7 @@ public class HomeController {
     @Autowired
     LoginVerificationService loginVerificationService;
     @Autowired
-    ManageTranscation manageTranscation;
+    ManagerDashboardService managerDashboardService;
     @Autowired
     CollectorDashboardService collectorDashboardService;
     Double totalAmount=0.0;
@@ -47,7 +48,7 @@ public class HomeController {
         if(loginVerificationService.verifyAtLogin(role,userId,passwd)){
             if(role.equals("Manager"))
             {
-                totalAmount=manageTranscation.fetchTotalAmount(userId);
+                totalAmount=managerDashboardService.fetchTotalAmount(userId);
                 model.addAttribute("hotelId",userId);
                 model.addAttribute("totalAmount",totalAmount);
                 return "managerDashboard";

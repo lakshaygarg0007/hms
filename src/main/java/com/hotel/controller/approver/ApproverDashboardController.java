@@ -2,6 +2,7 @@ package com.hotel.controller.approver;
 
 import com.hotel.Repository.*;
 import com.hotel.Service.approver.ApproverDashboardService;
+import com.hotel.Service.manager.ManagerDashboardService;
 import com.hotel.bean.approver.approverCollector;
 import com.hotel.bean.collector.CollectorCollection;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +43,7 @@ public class ApproverDashboardController {
     @Autowired
     ApproverDashboardService approverDashboardService;
     @Autowired
-    ManageTranscation managerTransaction;
+    ManagerDashboardService managerDashboardService;
 
     @RequestMapping(value = "/showRequests",method = RequestMethod.POST)
     public String showRequets(@RequestParam(value = "approverId")String approverId,Model model){
@@ -62,7 +63,7 @@ public class ApproverDashboardController {
     public String acceptRequest(@RequestParam(value = "approverId") String approverId,@RequestParam(value = "serialNumber")int serialNumber,@RequestParam(value = "collectorId")String collectorId,@RequestParam(value = "amount")Double amount,Model model){
         String hotelId=collectorCollectionsRepository.findBySerialNumber(serialNumber).get(0).getHotelId();
 
-        Double amountAvailable=managerTransaction.fetchTotalAmount(hotelId);
+        Double amountAvailable=managerDashboardService.fetchTotalAmount(hotelId);
        if(amountAvailable>=amount){
            model.addAttribute("success","Request Accepted Successfully");
            CollectorCollection collectorCollection=new CollectorCollection(serialNumber,hotelId,collectorId,approverId,amount,true);

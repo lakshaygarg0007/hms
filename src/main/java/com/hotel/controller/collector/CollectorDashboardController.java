@@ -6,6 +6,7 @@ import com.hotel.Repository.ApproverRequestsRepository;
 import com.hotel.Repository.CollectorCollectionsRepository;
 import com.hotel.Repository.CollectorManagerRepository;
 import com.hotel.Service.Collector.CollectorDashboardService;
+import com.hotel.Service.manager.ManagerDashboardService;
 import com.hotel.bean.collector.CollectorCollection;
 import com.hotel.bean.collector.collectorHotel;
 import javafx.util.Pair;
@@ -33,9 +34,7 @@ public class CollectorDashboardController {
     @Autowired
     ApproverCollectorRepository approverCollectorRepository;
     @Autowired
-    CollectorDashboardService collectorDashboardService;
-    @Autowired
-    ManageTranscation managerTransaction;
+    ManagerDashboardService managerDashboardService;
 
 
     @RequestMapping(value = "/showHotels",method = RequestMethod.POST)
@@ -50,7 +49,7 @@ public class CollectorDashboardController {
         List<Pair<String,Double>> collectorsList=new ArrayList<>();
 
         for(int i=0;i<collectorHotels.size();i++){
-            Double amountHotel=managerTransaction.fetchTotalAmount(collectorHotels.get(i).getHotelId());
+            Double amountHotel=managerDashboardService.fetchTotalAmount(collectorHotels.get(i).getHotelId());
             collectorsList.add(new Pair<>(collectorHotels.get(i).getHotelId(),amountHotel));
         }
 
