@@ -1,61 +1,72 @@
 package com.hotel.controller;
 
 
-import com.hotel.Repository.DBRepository;
-import com.hotel.bean.Employee;
-import com.hotel.bean.EmployeeFunctions;
+import com.hotel.Service.Collector.CollectorDashboardService;
+import com.hotel.Service.LoginVerificationService;
+import com.hotel.Service.manager.ManagerDashboardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class HomeController {
-
     @Autowired
-    DBRepository obj;
+    LoginVerificationService loginVerificationService;
+    @Autowired
+    ManagerDashboardService managerDashboardService;
+    @Autowired
+    CollectorDashboardService collectorDashboardService;
+    Double totalAmount=0.0;
 
     @RequestMapping(value = "/")
-    public String sendForm() {
-        return "Registration";
+    public String index() {
+        return "index";
     }
 
-
-    @RequestMapping(value = "/dashboard",method = RequestMethod.POST)
-    public String  fetchdashboard(@RequestParam(value = "uname") String uname, @RequestParam(value = "passwd")String passwd, Model model){
-     Employee emp=new Employee(uname,passwd);
-        obj.save(emp);
-        model.addAttribute("emp",emp);
-        return "dashboard";
-//15-3-20 to 15-04-2020
+    @RequestMapping(value = "/newRegistration")
+    public String newRegistraion(){
+        return "newRegistration";
     }
 
-    @RequestMapping(value = "/demo",method = RequestMethod.POST)
-    public String demo(@RequestParam(value="role") String s,Model model){
-        model.addAttribute("printthis",s);
-        System.out.println(s);
-        if(s=="manager"){
-            return "index";
+    @RequestMapping(value = "/newLogin")
+    public String login(){
+        return "newLogin";
+    }
+    
+    @RequestMapping("/managerLogin")
+    public String managerLogin(){
+        return "managerLogin";
+    }
+
+    @RequestMapping(value = "/LoginVerification",method = RequestMethod.POST)
+    public String verify(@RequestParam(value = "role")String role, @RequestParam(value = "userId")String userId, @RequestParam(value = "passwd")String passwd, Model model) {
+        //System.out.println(role+" "+userId+" "+passwd);
+
+        if(loginVerificationService.verifyAtLogin(role,userId,passwd)){
+            if(role.equals("Manager"))
+            {
+                totalAmount=managerDashboardService.fetchTotalAmount(userId);
+                model.addAttribute("hotelId",userId);
+                model.addAttribute("totalAmount",totalAmount);
+                return "managerDashboard";
+            }
+            else if(role.equals("Collector")){
+                totalAmount= collectorDashboardService.fetchAmount(userId);
+                model.addAttribute("collectorId",userId);
+                model.addAttribute("totalAmount",totalAmount);
+                return "collectorDashboardService";}
+            else{
+                model.addAttribute("approverId",userId);
+                return "approverDashboard";}
         }
-        else
-        return "demo";
+        else{
+            model.addAttribute("invalid","Invalid Credentials");
+            return "newLogin";
+        }
     }
 
-
-    @RequestMapping("/verify")
-    public String verify(){
-        return "verify";
-    }
-
-    @RequestMapping("/check")
-    public String verify(@RequestParam(value="fname")String fname,@RequestParam(value="lname") String lname,Model model){
-        boolean b=obj.existsById(fname);
-        model.addAttribute("value",b);
-        return "check";
-    }
 
 }

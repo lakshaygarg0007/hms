@@ -1,9 +1,8 @@
 
-_
-java:S1128"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8îÖ°ÿø.
-_
-java:S1128"=Remove this unused import 'com.hotel.bean.EmployeeFunctions'.(¨›Ø‰øÿÿÿÿ8¬¤€ù.
-t
-java:S1128"RRemove this unused import 'org.springframework.web.bind.annotation.RequestMethod'.(Ê™Ğÿûÿÿÿÿ8ú˜šüø.
-]
-java:S4684$"@Replace this persistent entity with a simple POJO or DTO object.(Ø‘şí8íı·ù.
+g
+java:S4488,"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Úş›8¢Ò”¿ü.
+]	java:S125."<This block of commented-out lines of code should be removed.(†•‚ªûÿÿÿÿ8¢Ò”¿ü.
+X	java:S125P"<This block of commented-out lines of code should be removed.(Êæñİ8³äŸÎû.
+]	java:S125]"<This block of commented-out lines of code should be removed.(µ¬Ëöşÿÿÿÿ8³äŸÎû.
+]	java:S125d"<This block of commented-out lines of code should be removed.(¦ãÈûøÿÿÿÿ8³äŸÎû.
+]	java:S125H"<This block of commented-out lines of code should be removed.(Ä°½Ãşÿÿÿÿ8³äŸÎû.

@@ -1,0 +1,12 @@
+
+K
+java:S1191"5Use classes from the Java API instead of Sun classes.(õÎ¾€
+s
+java:S1128
+"QRemove this unused import 'org.springframework.web.bind.annotation.RequestParam'.(Â¬À·ùÿÿÿÿ8æ£¸˜ü.
+t
+java:S1128	"RRemove this unused import 'org.springframework.web.bind.annotation.RequestMethod'.(Ê™Ğÿûÿÿÿÿ8…ñÁü.
+R
+java:S1128"5Remove this unused import 'java.text.ParseException'.(ñ®ï•8æ£¸˜ü.
+[
+java:S1128"9Remove this unused import 'org.springframework.ui.Model'.(ê†ıÿÿÿÿ8æ£¸˜ü.

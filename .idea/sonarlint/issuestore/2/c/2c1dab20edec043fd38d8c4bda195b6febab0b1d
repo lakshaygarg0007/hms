@@ -1,0 +1,7 @@
+
+h
+java:S1128"FRemove this unused import 'com.hotel.bean.approver.approverCollector'.(«±›¯øÿÿÿÿ8´ÙæÇü.
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8´ÙæÇü.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(£ºÒßùÿÿÿÿ
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ÂÚ›Â8öõİëü.

@@ -1,0 +1,20 @@
+
+Z
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8ì÷Ô¿ü.
+S	java:S106*"9Replace this use of System.out or System.err by a logger.(ÈÄºüýÿÿÿÿ
+]	java:S125:"<This block of commented-out lines of code should be removed.(‡žšÍøÿÿÿÿ8…íÂÏû.
+]	java:S125V"<This block of commented-out lines of code should be removed.(ýÆþÈüÿÿÿÿ8×°ÀÎû.
+X	java:S125Q"<This block of commented-out lines of code should be removed.(…Õîº8ì÷Ô¿ü.
+Z	java:S106D"9Replace this use of System.out or System.err by a logger.(ÇÖ”óùÿÿÿÿ8ì÷Ô¿ü.
+N
+java:S1481H"2Remove this unused "cashAvailable" local variable.(¡èô_8¨‚ïÕü.
+j
+java:S1192&"HDefine a constant instead of duplicating this literal "hotelId" 3 times.(ËÄÿ¶üÿÿÿÿ8ì÷Ô¿ü.
+\
+java:S1128"GRemove this unused import 'javax.persistence.criteria.CriteriaBuilder'.(É¿F
+i
+java:S1192("GDefine a constant instead of duplicating this literal "passwd" 3 times.(ÑÈ…çþÿÿÿÿ8…íÂÏû.
+k
+java:S1128"IRemove this unused import 'com.hotel.bean.collector.CollectorCollection'.(¨×ãœûÿÿÿÿ8ÞÕìËü.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(±²ªÀ
+Z	java:S106B"9Replace this use of System.out or System.err by a logger.(Ù«Ôßÿÿÿÿÿ8ì÷Ô¿ü.

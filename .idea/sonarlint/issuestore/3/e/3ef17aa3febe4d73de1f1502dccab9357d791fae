@@ -1,0 +1,35 @@
+
+h
+java:S1192D"KDefine a constant instead of duplicating this literal "approverId" 3 times.(§€ŞÏ8İ»’Ëü.
+]	java:S125B"<This block of commented-out lines of code should be removed.(Í ßìşÿÿÿÿ8ÍáëÁü.
+d
+java:S1128"BRemove this unused import 'com.hotel.bean.manager.ManagerExpense'.(Ê®™Õøÿÿÿÿ8å¸ëÇü.
+g
+java:S4488?"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(œÙœë8Ê¹æÁü.
+H
+java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8å¸ëÇü.
+U	java:S106T"9Replace this use of System.out or System.err by a logger.(ÖˆğÌ8½ë©ëü.
+f
+java:S4488O"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ùŸ¨{8¹¸ÖÅü.
+E
+java:S54114"*Use the primitive boolean expression here.(”·•¢şÿÿÿÿ
+c
+java:S1128"FRemove this unused import 'com.hotel.bean.manager.ManagerTransaction'.(îƒê8—À£ôü.
+t
+java:S1192G"RDefine a constant instead of duplicating this literal "approverDashboard" 3 times.(—À˜–ûÿÿÿÿ8Í£³Èü.
+g
+java:S4488]"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¯şÎ­8áÉ™Æü.
+W
+java:S1191"5Use classes from the Java API instead of Sun classes.( âÁ¡şÿÿÿÿ8Ğş¦ìü.
+T	java:S106Q"9Replace this use of System.out or System.err by a logger.(àØÒ
+8âÛëü.
+g
+java:S1128	"ERemove this unused import 'com.hotel.bean.approver.approverRequests'.(¶©¢…úÿÿÿÿ8Úş”Çü.
+]
+java:S1128";Remove this unused import 'sun.security.x509.SerialNumber'.( âÁ¡şÿÿÿÿ8ı¬§ìü.
+l
+java:S1128"VRemove this unused import 'com.hotel.Service.manager.ManagerRegistrationVerification'.(é±´Î
+K
+java:S1128"5Remove this unused import 'java.text.ParseException'.(ñ®ï•
+`
+java:S44881"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¢Ş²
