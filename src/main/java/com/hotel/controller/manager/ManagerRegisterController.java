@@ -1,6 +1,6 @@
 package com.hotel.controller.manager;
 
-import com.hotel.Service.manager.ManagerRegistrationVerification;
+import com.hotel.Service.manager.ManagerRegistrationVerificationService;
 import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,10 +14,10 @@ import java.util.Map;
 @Controller
 public class ManagerRegisterController {
     @Autowired
-    ManagerRegistrationVerification managerRegistrationVerification;
+    ManagerRegistrationVerificationService managerRegistrationVerificationService;
     @RequestMapping(value = "/managerRegistrationVerify",method = RequestMethod.POST)
     public String register(@RequestParam Map<String,String> map, Model model){
-        Pair<String,Boolean> pair= managerRegistrationVerification.verify(map);
+        Pair<String,Boolean> pair= managerRegistrationVerificationService.verify(map);
         if(pair.getValue()){
             model.addAttribute("success",pair.getKey());
             return "newLogin";

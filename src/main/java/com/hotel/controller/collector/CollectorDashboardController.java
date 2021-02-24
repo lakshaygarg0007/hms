@@ -5,18 +5,13 @@ import com.hotel.Repository.ApproverCollectorRepository;
 import com.hotel.Repository.ApproverRequestsRepository;
 import com.hotel.Repository.CollectorCollectionsRepository;
 import com.hotel.Repository.CollectorManagerRepository;
-import com.hotel.Service.Collector.CollectorDashboard;
-import com.hotel.Service.manager.ManageTranscation;
-import com.hotel.bean.approver.approverRequests;
+import com.hotel.Service.Collector.CollectorDashboardService;
 import com.hotel.bean.collector.CollectorCollection;
 import com.hotel.bean.collector.collectorHotel;
-import com.hotel.bean.manager.ManagerTransaction;
-import com.hotel.controller.manager.ManagerDashboardControls;
 import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,7 +23,7 @@ import java.util.List;
 public class CollectorDashboardController {
 
     @Autowired
-    CollectorDashboard collectorDashboard;
+    CollectorDashboardService collectorDashboardService;
     @Autowired
     CollectorManagerRepository collectorManagerRepository;
     @Autowired
@@ -38,7 +33,7 @@ public class CollectorDashboardController {
     @Autowired
     ApproverCollectorRepository approverCollectorRepository;
     @Autowired
-    CollectorDashboard collectorDashboardService;
+    CollectorDashboardService collectorDashboardService;
     @Autowired
     ManageTranscation managerTransaction;
 
@@ -64,7 +59,7 @@ public class CollectorDashboardController {
         model.addAttribute("amount","Amount");
         model.addAttribute("c2","cashAvailable");
         model.addAttribute("c3","cashCollected");
-        return "collectorDashboard";
+        return "collectorDashboardService";
     }
 
     @RequestMapping(value = "/collectCash",method = RequestMethod.POST)
@@ -80,7 +75,7 @@ public class CollectorDashboardController {
         else{
             model.addAttribute("error","Invalid Amount Choosen");
         }
-        return "collectorDashboard";
+        return "collectorDashboardService";
     }
 
 

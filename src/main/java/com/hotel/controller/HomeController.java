@@ -1,9 +1,8 @@
 package com.hotel.controller;
 
 
-import com.hotel.Service.Collector.CollectorDashboard;
-import com.hotel.Service.LoginVerification;
-import com.hotel.Service.manager.ManageTranscation;
+import com.hotel.Service.Collector.CollectorDashboardService;
+import com.hotel.Service.LoginVerificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
     @Autowired
-    LoginVerification loginVerification;
+    LoginVerificationService loginVerificationService;
     @Autowired
     ManageTranscation manageTranscation;
     @Autowired
-    CollectorDashboard collectorDashboard;
+    CollectorDashboardService collectorDashboardService;
     Double totalAmount=0.0;
 
     @RequestMapping(value = "/")
@@ -45,7 +44,7 @@ public class HomeController {
     public String verify(@RequestParam(value = "role")String role, @RequestParam(value = "userId")String userId, @RequestParam(value = "passwd")String passwd, Model model) {
         //System.out.println(role+" "+userId+" "+passwd);
 
-        if(loginVerification.verifyAtLogin(role,userId,passwd)){
+        if(loginVerificationService.verifyAtLogin(role,userId,passwd)){
             if(role.equals("Manager"))
             {
                 totalAmount=manageTranscation.fetchTotalAmount(userId);
@@ -54,10 +53,10 @@ public class HomeController {
                 return "managerDashboard";
             }
             else if(role.equals("Collector")){
-                totalAmount=collectorDashboard.fetchAmount(userId);
+                totalAmount= collectorDashboardService.fetchAmount(userId);
                 model.addAttribute("collectorId",userId);
                 model.addAttribute("totalAmount",totalAmount);
-                return "collectorDashboard";}
+                return "collectorDashboardService";}
             else{
                 model.addAttribute("approverId",userId);
                 return "approverDashboard";}
@@ -68,37 +67,5 @@ public class HomeController {
         }
     }
 
-   /* @RequestMapping(value = "/dashboard",method = RequestMethod.POST)
-    public String  fetchdashboard(@RequestParam(value = "uname") String uname, @RequestParam(value = "passwd")String passwd, Model model){
-     User user=new User(uname,passwd);
-        obj.save(user);
-        model.addAttribute("user",user);
-        return "dashboard";
-    }*/
 
- /*   @RequestMapping(value = "/demo",method = RequestMethod.POST)
-    public String demo(@RequestParam(value="role") String s,Model model){
-        model.addAttribute("printthis",s);
-        System.out.println(s);
-        if(s.equals("manager")){
-            return "mngr-dashboard";
-        }
-        else
-        return "demo";
-    }
-*/
-
- /*
-    @RequestMapping("/check")
-    public String verify(@RequestParam(value="fname")String fname,@RequestParam(value="lname") String lname,Model model){
-        boolean b=obj.existsById(fname);
-        model.addAttribute("value",b);
-        return "check";
-    }*/
-
-   /* @RequestMapping(value = "/payment",method = RequestMethod.POST)
-    public String payment(@RequestParam(value = )){
-
-    }
-*/
 }

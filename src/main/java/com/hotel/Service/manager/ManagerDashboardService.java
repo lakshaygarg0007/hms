@@ -14,14 +14,25 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-public class ManageTranscation {
+public class ManagerDashboardService {
+    @Autowired
+    ManagerExpenseRepository managerExpenseRepository;
     @Autowired
     ManagerTransactionRepository managerTransactionRepository;
 
     @Autowired
-    ManagerExpenseRepository managerExpenseRepository;
-    @Autowired
     CollectorCollectionsRepository collectorCollectionsRepository;
+
+
+
+    public void addExpense(String hotelId, Double transaction, Date date){
+        ManagerExpense managerExpense=new ManagerExpense(hotelId,transaction,date);
+        managerExpenseRepository.save(managerExpense);
+    }
+
+    public List<ManagerExpense> expenseHistory(String hotelId, Date startingDate, Date endingDate){
+        return managerExpenseRepository.findByHotelIdAndDateBetween(hotelId,startingDate, endingDate);
+    }
 
 
     ManagerTransaction managerDashboard=new ManagerTransaction();
@@ -31,7 +42,7 @@ public class ManageTranscation {
     }
 
     public Double fetchTranscation(String hotelId,@DateTimeFormat(pattern = "yyyy-MM-dd") Date date){
-      // managertranscationdb
+        // managertranscationdb
         List<ManagerTransaction> list=managerTransactionRepository.findByHotelIdAndDate(hotelId, date);
         return list.get(0).getTransaction();
     }
@@ -60,5 +71,6 @@ public class ManageTranscation {
 
         return totolAmount;
     }
+
 
 }

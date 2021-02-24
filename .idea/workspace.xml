@@ -3,17 +3,32 @@
   <component name="ChangeListManager">
     <list default="true" id="2f22064d-7000-4c81-b19e-75741f7e27ad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/Service/Collector/CollectorDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/Service/Collector/CollectorDashboardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/Service/Collector/CollectorRegistrationVerification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/Service/Collector/CollectorRegistrationVerificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/Service/LoginVerification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/Service/LoginVerificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/Service/approver/ApproverRegistrationVerification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/Service/approver/ApproverRegistrationVerificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/Service/manager/ManageTranscation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/Service/manager/ManagerExpenseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/Service/manager/ManagerRegistrationVerification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/Service/manager/ManagerRegistrationVerificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/controller/approver/ApproverRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/controller/approver/ApproverDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/controller/collector/CollectorDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/controller/collector/CollectorDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/controller/collector/CollectorRegistration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/controller/collector/CollectorRegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/controller/collector/CollectorRegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/controller/manager/ManagerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/controller/manager/ManagerDashboardControls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/controller/manager/ManagerDashboardControls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotel/controller/manager/ManagerRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hotel/controller/manager/ManagerRegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/approver/approverDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/approver/approverDashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/approver/approverRegistration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/approver/approverRegistration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collector/collectorDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collector/collectorDashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collector/collectorLogin.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collector/collectorRegistration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collector/collectorRegistration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/manager/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/manager/demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/manager/demo.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/manager/managerDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/manager/managerDashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/manager/managerRegistration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/manager/managerRegistration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/manager/managerLogin.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hotel/controller/manager/ManagerDashboardControls.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hotel/controller/manager/ManagerDashboardControls.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/manager/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/manager/demo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/manager/managerDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/manager/managerDashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newRegistration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newRegistration.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +178,7 @@
       <workItem from="1613899195456" duration="19792000" />
       <workItem from="1613964801451" duration="41846000" />
       <workItem from="1614100510260" duration="5470000" />
-      <workItem from="1614142891500" duration="6327000" />
+      <workItem from="1614142891500" duration="9050000" />
     </task>
     <servers />
   </component>
@@ -194,14 +209,14 @@
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="489" y="73" key="#com.intellij.ide.util.MemberChooser/0.23.1440.808@0.23.1440.808" timestamp="1613726505935" />
-    <state x="0" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613837772071">
+    <state x="0" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614163630641">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state x="0" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.808@0.23.1440.808" timestamp="1613837772071" />
-    <state x="395" y="127" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613899485879">
+    <state x="0" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.808@0.23.1440.808" timestamp="1614163630641" />
+    <state x="395" y="127" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614163767073">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state x="395" y="127" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.808@0.23.1440.808" timestamp="1613899485879" />
+    <state x="395" y="127" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.808@0.23.1440.808" timestamp="1614163767073" />
     <state x="395" y="127" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.811@0.23.1440.811" timestamp="1613107047198" />
     <state x="395" y="127" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1613929929489">
       <screen x="0" y="23" width="1440" height="808" />
@@ -388,23 +403,18 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hotel/controller/collector/CollectorDashboardController.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/hotel/controller/manager/ManagerDashboardControls.java</url>
-          <line>110</line>
+          <line>107</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/hotel/controller/manager/ManagerDashboardControls.java</url>
-          <line>108</line>
+          <line>105</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/hotel/controller/manager/ManagerDashboardControls.java</url>
-          <line>109</line>
+          <line>106</line>
           <properties class="com.hotel.controller.manager.ManagerDashboardControls" method="deleteTransaction">
             <option name="EMULATED" value="true" />
           </properties>

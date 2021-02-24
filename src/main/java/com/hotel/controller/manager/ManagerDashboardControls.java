@@ -2,9 +2,6 @@ package com.hotel.controller.manager;
 
 import com.hotel.Repository.ManagerExpenseRepository;
 import com.hotel.Repository.ManagerTransactionRepository;
-import com.hotel.Service.manager.ManageTranscation;
-import com.hotel.Service.LoginVerification;
-import com.hotel.Service.manager.ManagerExpenseService;
 import com.hotel.bean.manager.ManagerExpense;
 import com.hotel.bean.manager.ManagerTransaction;
 import org.springframework.beans.factory.annotation.Autowired;

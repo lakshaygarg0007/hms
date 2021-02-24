@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 @Service
 
-public class ManagerRegistrationVerification {
+public class ManagerRegistrationVerificationService {
 
     @Autowired
     ManagerRegistrationRepository managerRegistrationRepository;
@@ -52,13 +52,12 @@ public class ManagerRegistrationVerification {
         }
         else
         {
+            //Here collector is also assigned
+
             ManagerEntity managerEntity = new ManagerEntity(map.get("hotelId"), map.get("fname"), map.get("lname"), map.get("email"),map.get("cnumber") ,map.get("passwd"));
             managerRegistrationRepository.save(managerEntity);
             String hotelId=map.get("hotelId");
-            /*Pair<Integer,String> pair=AtStarting.q.peek();
-            collectorHotel collectorHotel=new collectorHotel(pair.getValue(),map.get("hotelId"));
-            collectorManagerRepository.save(collectorHotel);
-            */
+
             List<CollectorEntity> list=collectorRegistrationRepository.findAll();
             List<Pair<String , Integer>> pq=new ArrayList<>();
             for(int i=0;i<list.size();i++){
@@ -78,15 +77,9 @@ public class ManagerRegistrationVerification {
             for(int i=0;i<managerExpenses.size();i++){
                 cashAvailable-= managerExpenses.get(i).getExpense();
             }
-      //      List<Object[]> managerCollectorTable = collectorManagerRepository.findAllCollectors();
-       //     String collectorId =managerCollectorTable.get(0)[1].toString();
-      //      System.out.println(collectorId +"  "+managerCollectorTable.size()) ;
 
             collectorHotel obj = new collectorHotel(pq.get(pq.size()-1).getKey(), hotelId);
-//        PriorityQueue<Pair<Integer, String>> pq;
-//        for(int i = 0 ; i < managerCollectorTable.size() ; i++){
-//            pq.add(new Pair<Integer , String>(managerCollectorTable.get(i).getHotelId() , managerCollectorTable.get(i).getCollectorID()))
-//        }
+
             collectorManagerRepository.save(obj);
             return new Pair<>("Registered Successfully You can Login",true);
         }

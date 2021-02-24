@@ -19,7 +19,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-public class CollectorDashboard {
+public class CollectorDashboardService {
     @Autowired
     CollectorHotelRepository collectorHotelRepository;
     @Autowired

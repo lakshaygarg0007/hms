@@ -1,34 +1,21 @@
 package com.hotel.controller.approver;
 
 import com.hotel.Repository.*;
-import com.hotel.Service.approver.ApproverRegistrationVerification;
 import com.hotel.Service.approver.ApproverDashboardService;
-import com.hotel.Service.manager.ManageTranscation;
-import com.hotel.Service.manager.ManagerRegistrationVerification;
 import com.hotel.bean.approver.approverCollector;
-import com.hotel.bean.approver.approverRequests;
 import com.hotel.bean.collector.CollectorCollection;
-import com.hotel.bean.collector.collectorHotel;
-import com.hotel.bean.manager.ManagerExpense;
-import com.hotel.bean.manager.ManagerTransaction;
-import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import sun.security.x509.SerialNumber;
 
-import java.text.ParseException;
-import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 @Controller
-public class ApproverRegistration {
-    @Autowired
-    ApproverRegistrationVerification approverRegistrationVerification;
+public class ApproverDashboardController {
+
     @Autowired
     ApproverCollectorRepository approverCollectorRepository;
     @Autowired
@@ -39,25 +26,6 @@ public class ApproverRegistration {
     CollectorCollectionsRepository collectorCollectionsRepository;
     @Autowired
     CollectorHotelRepository collectorHotelRepository;
-
-
-    @RequestMapping(value = "/approverRegistration")
-    public String collectorRegistration(){
-        return "approverRegistration";
-    }
-
-    @RequestMapping(value = "/approverRegistrationVerify",method = RequestMethod.POST)
-    public String register(@RequestParam Map<String,String> map, Model model){
-        Pair<String,Boolean> pair= approverRegistrationVerification.verify(map);
-        if(pair.getValue()){
-            model.addAttribute("success",pair.getKey());
-            return "newLogin";
-        }
-        else{
-            model.addAttribute("error",pair.getKey());
-            return "approverRegistration";
-        }
-    }
 
 
     @RequestMapping(value = "/showCollectors",method = RequestMethod.POST)

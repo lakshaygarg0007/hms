@@ -4,13 +4,12 @@ package com.hotel.Service;
 import com.hotel.Repository.ApproverRegistrationRepository;
 import com.hotel.Repository.CollectorRegistrationRepository;
 import com.hotel.Repository.ManagerRegistrationRepository;
-import com.hotel.controller.approver.ApproverRegistration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 
-public class LoginVerification {
+public class LoginVerificationService {
     @Autowired
     ManagerRegistrationRepository managerRegistrationRepository;
     @Autowired
