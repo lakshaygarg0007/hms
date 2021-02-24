@@ -72,6 +72,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
         <style type="text/css"></style>
+        <title>HMS</title>
 </head>
 <body>
 
@@ -203,6 +204,7 @@
                         <th th:text="${c2}"></th>
                         <th th:text="${c4}"></th>
                         <th th:text="${c5}"></th>
+                        <th></th>
                         </thead>
                         <div class="container">
                                 <tbody>
@@ -213,7 +215,7 @@
                                                 <td><input type="text" th:value="${i.transaction}" name="transaction" ></td>
                                                 <td><input type="submit" value="DeleteRecord" name="action"></td>
                                                 <td><input type="submit" value="UpdateRecord" name="action"></td>
-                                                <td><input placeholder="date" type="hidden"  th:value="${i.date}"  name="date"></td>
+                                                <td><input  type="hidden" th:value="${i.date}"  name="date"></td>
                                         </form>
                                 </tr>
                                 </tbody>
@@ -274,7 +276,7 @@
 
         $(function(){
                 $('.datepicker5').on('click', function() {
-                        $(this).datepicker({showOn:'focus',maxDate:new Date()}).focus();
+                        $(this).datepicker({showOn:'focus'}).focus();
                 });
         });
 </script>
