@@ -1,5 +1,6 @@
 package com.hotel.bean.manager;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +10,7 @@ import java.util.Date;
 @Entity
 @NoArgsConstructor
 @Getter
+@AllArgsConstructor
 public class ManagerExpense {
     @Column
     private String hotelId;

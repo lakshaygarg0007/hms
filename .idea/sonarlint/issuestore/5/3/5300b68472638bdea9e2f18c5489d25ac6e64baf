@@ -1,10 +1,11 @@
 
-a
-java:S1128"DRemove this unused import 'com.hotel.bean.collector.collectorHotel'.(ë‘¹8”ãÀÏû.
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Ö»ÀÏû.
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Šƒ£™
+]	java:S125"<This block of commented-out lines of code should be removed.(û¿ôşÿÿÿÿ8ñóãšü.
+U	java:S106."9Replace this use of System.out or System.err by a logger.(ÄğÍ™8ñóãšü.
+U	java:S1065"9Replace this use of System.out or System.err by a logger.(ÂÚ›Â8–ÅøÁü.
 c
-java:S1128"ARemove this unused import 'com.hotel.bean.manager.ManagerEntity'.(†ÓÛÈüÿÿÿÿ8±¼ÄÏû.
-]	java:S125"<This block of commented-out lines of code should be removed.(û¿ôşÿÿÿÿ8ñóãšü.
-U	java:S106'"9Replace this use of System.out or System.err by a logger.(ÄğÍ™8ñóãšü.
+java:S1128
+"ARemove this unused import 'com.hotel.bean.manager.ManagerEntity'.(†ÓÛÈüÿÿÿÿ8±¼ÄÏû.
+a
+java:S1128	"DRemove this unused import 'com.hotel.bean.collector.collectorHotel'.(ë‘¹8”ãÀÏû.
+Z	java:S1067"9Replace this use of System.out or System.err by a logger.(ä¢åƒúÿÿÿÿ8éÂ€Âü.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Šƒ£™

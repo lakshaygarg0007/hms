@@ -1,5 +1,5 @@
 
-P
-java:S1191"5Use classes from the Java API instead of Sun classes.(×ÜÇşÿÿÿÿ
 W
 java:S1128"<Remove this unused import 'com.sun.javafx.beans.IDProperty'.(×ÜÇşÿÿÿÿ
+P
+java:S1191"5Use classes from the Java API instead of Sun classes.(×ÜÇşÿÿÿÿ

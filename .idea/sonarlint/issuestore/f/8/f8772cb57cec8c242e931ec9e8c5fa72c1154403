@@ -1,0 +1,16 @@
+
+\
+java:S1128"ARemove this unused import 'com.hotel.bean.manager.ManagerEntity'.(†ÓÛÈüÿÿÿÿ
+e
+java:S1128	"ORemove this unused import 'com.hotel.controller.approver.ApproverRegistration'.(Ã¥
+V	java:S125"<This block of commented-out lines of code should be removed.(û¿ôşÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(£ºÒßùÿÿÿÿ
+l
+java:S1128"QRemove this unused import 'com.hotel.Repository.CollectorRegistrationRepository'.(Û»¬öûÿÿÿÿ
+Z
+java:S1128"DRemove this unused import 'com.hotel.bean.collector.collectorHotel'.(ë‘¹
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+[
+java:S1128"ERemove this unused import 'com.hotel.bean.collector.CollectorEntity'.(š¥÷¢
+N	java:S106*"9Replace this use of System.out or System.err by a logger.(ÄğÍ™
