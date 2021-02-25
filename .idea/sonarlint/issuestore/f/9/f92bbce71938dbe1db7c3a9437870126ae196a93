@@ -1,0 +1,15 @@
+
+`
+java:S4488>"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¯þÎ­
+M	java:S1062"9Replace this use of System.out or System.err by a logger.(àØÒ
+
+`
+java:S4488 "JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(œÙœë
+a
+java:S1192%"KDefine a constant instead of duplicating this literal "approverId" 3 times.(§€ÞÏ
+V	java:S125#"<This block of commented-out lines of code should be removed.(Í ßìþÿÿÿÿ
+N	java:S1065"9Replace this use of System.out or System.err by a logger.(ÖˆðÌ
+m
+java:S1192("RDefine a constant instead of duplicating this literal "approverDashboard" 3 times.(—À˜–ûÿÿÿÿ
+_
+java:S44880"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ùŸ¨{

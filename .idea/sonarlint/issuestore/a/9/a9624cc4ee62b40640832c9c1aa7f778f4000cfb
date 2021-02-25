@@ -1,4 +1,0 @@
-
-c
-java:S1128"FRemove this unused import 'com.hotel.bean.manager.ManagerTransaction'.(îƒê8²”šÉü.
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(±²ªÀ

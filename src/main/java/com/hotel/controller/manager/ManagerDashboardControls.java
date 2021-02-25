@@ -88,17 +88,22 @@ public class ManagerDashboardControls {
     @RequestMapping(value="/expenseHistory",method = RequestMethod.POST)
     public String expenseHistory(@RequestParam(value = "hotelId")String hotelId,@RequestParam(value = "startingDate")@DateTimeFormat(pattern = "yyyy-MM-dd")Date startingDate, @RequestParam(value = "endingDate")@DateTimeFormat(pattern = "yyyy-MM-dd")Date endingDate, Model model)
     {
-        List<ManagerExpense> list=managerDashboardService.expenseHistory(hotelId,startingDate,endingDate);
-        model.addAttribute("expense",list);
-        totalAmount=managerDashboardService.fetchTotalAmount(hotelId);
-        model.addAttribute("hotelId",hotelId);
-        model.addAttribute("totalAmount", totalAmount);
-        model.addAttribute("totalAmount", totalAmount);
-        model.addAttribute("c1", "Serial Number");
-        model.addAttribute("c2", "Amount");
-        model.addAttribute("c3","Date");
-        model.addAttribute("c4","Delete Record");
-        model.addAttribute("c5","Update Record");
+        try{
+            List<ManagerExpense> list=managerDashboardService.expenseHistory(hotelId,startingDate,endingDate);
+            model.addAttribute("expense",list);
+            totalAmount=managerDashboardService.fetchTotalAmount(hotelId);
+            model.addAttribute("hotelId",hotelId);
+            model.addAttribute("totalAmount", totalAmount);
+            model.addAttribute("totalAmount", totalAmount);
+            model.addAttribute("c1", "Serial Number");
+            model.addAttribute("c2", "Amount");
+            model.addAttribute("c3","Date");
+            model.addAttribute("c4","Delete Record");
+            model.addAttribute("c5","Update Record");
+        }
+        catch (Exception e){
+            model.addAttribute("error","Date not selected");
+        }
         return "managerDashboard";
     }
 

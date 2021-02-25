@@ -1,4 +1,2 @@
 
-e
-java:S1128"ORemove this unused import 'com.hotel.controller.approver.ApproverRegistration'.(Ã¥
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æü”ÿÿÿÿÿ

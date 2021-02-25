@@ -35,11 +35,7 @@ public class HomeController {
     public String login(){
         return "newLogin";
     }
-    
-    @RequestMapping("/managerLogin")
-    public String managerLogin(){
-        return "managerLogin";
-    }
+
 
     @RequestMapping(value = "/LoginVerification",method = RequestMethod.POST)
     public String verify(@RequestParam(value = "role")String role, @RequestParam(value = "userId")String userId, @RequestParam(value = "passwd")String passwd, Model model) {
