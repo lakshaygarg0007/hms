@@ -1,35 +1,31 @@
 
-X	java:S125%"<This block of commented-out lines of code should be removed.(÷²Å„8ùã³¾ü.
 l
-java:S4488Y"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(²Ë€ÿüÿÿÿÿ8´ñÉü.
-e
-java:S4488/"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ğ˜î§úÿÿÿÿ
-]	java:S125("<This block of commented-out lines of code should be removed.(ö±–ëıÿÿÿÿ8±Ú‚Éü.
-[
-java:S1128"@Remove this unused import 'com.hotel.Service.LoginVerification'.(¦Àöõúÿÿÿÿ
-]	java:S1254"<This block of commented-out lines of code should be removed.(Ò§ºûÿÿÿÿ8™ú‚Éü.
-]	java:S125 "<This block of commented-out lines of code should be removed.(¬á·êøÿÿÿÿ8ùã³¾ü.
-i
-java:S1854r"GRemove this useless assignment to local variable "managerTransactions".(‚¨ËÁüÿÿÿÿ8é¤²òü.
+java:S4488X"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(²Ë€ÿüÿÿÿÿ8´ñÉü.
 `
-java:S4488J"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ªÖÓ¸
-k
-java:S1192U"NDefine a constant instead of duplicating this literal "Delete Record" 3 times.(ö«ó8‘Ÿ¨òü.
-p
-java:S1192V"NDefine a constant instead of duplicating this literal "Update Record" 3 times.(¯¼ñÒùÿÿÿÿ8¡ÖÏòü.
-j
-java:S1192#"HDefine a constant instead of duplicating this literal "hotelId" 5 times.(¦˜ãÖşÿÿÿÿ8ƒøÌü.
-Z
-java:S1481r"8Remove this unused "managerTransactions" local variable.(‚¨ËÁüÿÿÿÿ8é¤²òü.
-V	java:S125<"<This block of commented-out lines of code should be removed.(ô¾‹Äıÿÿÿÿ
+java:S4488B"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ã§Œˆ
 `
-java:S4488C"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ã§Œˆ
-e
-java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ÅÃ­¬ûÿÿÿÿ
-s
-java:S1192,"QDefine a constant instead of duplicating this literal "managerDashboard" 5 times.(Ûî’Ùùÿÿÿÿ8İùÃü.
+java:S4488I"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ªÖÓ¸
+f
+java:S1854…"CRemove this useless assignment to local variable "managerExpenses".(ç·¤Îÿÿÿÿÿ8™çşäı.
+W
+java:S1481…"4Remove this unused "managerExpenses" local variable.(ç·¤Îÿÿÿÿÿ8™çşäı.
+X	java:S125$"<This block of commented-out lines of code should be removed.(÷²Å„8ùã³¾ü.
+]	java:S125'"<This block of commented-out lines of code should be removed.(ö±–ëıÿÿÿÿ8±Ú‚Éü.
 g
-java:S4488j"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ø½ ”8ƒ­›ñü.
-Z	java:S106""9Replace this use of System.out or System.err by a logger.(•åıäúÿÿÿÿ8ùã³¾ü.
+java:S4488n"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ø½ ”8ƒ­›ñü.
+s
+java:S1192+"QDefine a constant instead of duplicating this literal "managerDashboard" 6 times.(Ûî’Ùùÿÿÿÿ8İùÃü.
+l
+java:S4488~"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ãğê ùÿÿÿÿ8™çşäı.
+]	java:S125t"<This block of commented-out lines of code should be removed.(ÊˆÍäıÿÿÿÿ8™çşäı.
 i
-java:S1192)"LDefine a constant instead of duplicating this literal "totalAmount" 6 times.(úùØİ8éÉÎÉü.
+java:S1192("LDefine a constant instead of duplicating this literal "totalAmount" 7 times.(úùØİ8éÉÎÉü.
+e
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ÅÃ­¬ûÿÿÿÿ
+]	java:S125"<This block of commented-out lines of code should be removed.(¬á·êøÿÿÿÿ8ùã³¾ü.
+j
+java:S1192""HDefine a constant instead of duplicating this literal "hotelId" 6 times.(¦˜ãÖşÿÿÿÿ8ƒøÌü.
+e
+java:S4488."JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ğ˜î§úÿÿÿÿ
+]	java:S1253"<This block of commented-out lines of code should be removed.(Ò§ºûÿÿÿÿ8™ú‚Éü.
+V	java:S125;"<This block of commented-out lines of code should be removed.(ô¾‹Äıÿÿÿÿ

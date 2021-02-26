@@ -1,4 +1,4 @@
 
 g
-java:S4488,"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Úş›8İËşı.
-]	java:S125."<This block of commented-out lines of code should be removed.(†•‚ªûÿÿÿÿ8İËşı.
+java:S4488("JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Úş›8İËşı.
+]	java:S125*"<This block of commented-out lines of code should be removed.(†•‚ªûÿÿÿÿ8İËşı.

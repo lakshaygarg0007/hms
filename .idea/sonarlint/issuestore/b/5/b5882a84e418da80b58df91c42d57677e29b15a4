@@ -1,0 +1,17 @@
+
+d
+java:S1128"IRemove this unused import 'com.hotel.bean.collector.CollectorCollection'.(¨×ãœûÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(±²ªÀ
+c
+java:S1192&"HDefine a constant instead of duplicating this literal "hotelId" 3 times.(ËÄÿ¶üÿÿÿÿ
+S	java:S106A"9Replace this use of System.out or System.err by a logger.(Ù«Ôßÿÿÿÿÿ
+b
+java:S1192("GDefine a constant instead of duplicating this literal "passwd" 3 times.(ÑÈ…çşÿÿÿÿ
+G
+java:S1481G"2Remove this unused "cashAvailable" local variable.(¡èô_
+S	java:S106C"9Replace this use of System.out or System.err by a logger.(ÇÖ”óùÿÿÿÿ
+S	java:S106*"9Replace this use of System.out or System.err by a logger.(ÈÄºüıÿÿÿÿ
+S
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ
+\
+java:S1128"GRemove this unused import 'javax.persistence.criteria.CriteriaBuilder'.(É¿F

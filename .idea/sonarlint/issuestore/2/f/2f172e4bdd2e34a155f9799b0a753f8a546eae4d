@@ -1,16 +1,7 @@
 
-p
-java:S1128"SRemove this unused import 'org.springframework.web.bind.annotation.ModelAttribute'.(®ùæé8Ì´Şéü.
 g
-java:S1128
-"ERemove this unused import 'com.hotel.bean.approver.approverRequests'.(¶©¢…úÿÿÿÿ8…ÂÈü.
+java:S4488@"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(òÈ±‰8æ·©Õü.
+U	java:S106."9Replace this use of System.out or System.err by a logger.(ıäøş8ë–²Õü.
 l
-java:S4488."JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ûßŞåşÿÿÿÿ8æ·©Õü.
-t
-java:S1128"RRemove this unused import 'com.hotel.controller.manager.ManagerDashboardControls'.(ÚüØáşÿÿÿÿ8Ş¯çü.
-c
-java:S1128"FRemove this unused import 'com.hotel.bean.manager.ManagerTransaction'.(îƒê8Ş¯çü.
-U	java:S1064"9Replace this use of System.out or System.err by a logger.(ıäøş8ë–²Õü.
-U	java:S1065"9Replace this use of System.out or System.err by a logger.(¥êÓ8ë–²Õü.
-g
-java:S4488F"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(òÈ±‰8æ·©Õü.
+java:S4488("JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ûßŞåşÿÿÿÿ8æ·©Õü.
+U	java:S106/"9Replace this use of System.out or System.err by a logger.(¥êÓ8ë–²Õü.

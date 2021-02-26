@@ -69,3 +69,5 @@ Lsrc/main/java/com/hotel/controller/approver/ApproverDashboardController.java,f
 Osrc/main/java/com/hotel/controller/approver/ApproverRegistrationController.java,6/3/631ddf46f782509d941e22579917737b15db7856
 ‡
 Wsrc/main/java/com/hotel/Service/Collector/CollectorRegistrationVerificationService.java,d/d/dd4362a96a969d31b73228ee764cf85861bcb827
+ƒ
+Ssrc/main/java/com/hotel/Service/manager/ManagerRegistrationVerificationService.java,b/5/b5882a84e418da80b58df91c42d57677e29b15a4
