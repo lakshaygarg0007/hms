@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
@@ -28,7 +27,7 @@
                 <div th:text="${totalAmount}" style="font-weight: bold; font-size: 20px; color: #ff0000;"></div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/">
+                <a class="nav-link" href="/logout">
                     Logout
                 </a>
             </li>
@@ -131,14 +130,25 @@
         <tbody>
 
 
+        <script type="text/javascript">
+            function validateForm() {
+                const a = document.forms["Form"]["amount"].value;
+                if (a == null || a === "") {
+                    alert("Please Fill Amount");
+                    return false;
+                }
+            }
+        </script>
+
+
             <tr th:each="collector : ${collectorsList}">
-                <form action="/collectCash" method="post" >
+                <form action="/collectCash" name ="Form" method="post" onsubmit="return validateForm()">
                     <input type="hidden" name="collectorId" class="form-control" th:value="${collectorId}" placeholder="Collector-Id" readonly>
                 <td>
                     <input type="text"    name="hotelId" th:value="${collector.getKey()}" readonly >
                 </td>
                 <td>
-                    <input type="text"  name="amount" placeholder="Enter Amount" >
+                    <input type="text"  name="amount" placeholder="Enter Amount" pattern=".*\S\S.*">
                 </td>
 
                 <td>
@@ -150,6 +160,8 @@
                 </td>
                 </form>
             </tr>
+
+            v
 
         <div th:text="${error}" style="color: red;font-size: 20px;font-weight: bold;"></div>
         <div th:text="${success}" style="color: green;font-size: 20px;font-weight: bold;"></div>

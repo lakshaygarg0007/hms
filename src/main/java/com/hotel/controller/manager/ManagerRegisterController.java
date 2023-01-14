@@ -17,15 +17,20 @@ public class ManagerRegisterController {
     ManagerRegistrationVerificationService managerRegistrationVerificationService;
     @RequestMapping(value = "/managerRegistrationVerify",method = RequestMethod.POST)
     public String register(@RequestParam Map<String,String> map, Model model){
-        Pair<String,Boolean> pair= managerRegistrationVerificationService.verify(map);
+        Pair<String,Boolean> pair = managerRegistrationVerificationService.verify(map);
         if(pair.getValue()){
             model.addAttribute("success",pair.getKey());
             return "newLogin";
         }
         else{
             model.addAttribute("error",pair.getKey());
-            return "managerRegistration";
+            return "manager/managerRegistration";
         }
+    }
+
+    @RequestMapping(value = "/managerRegistration", method = RequestMethod.GET)
+    public String managerRegistration() {
+        return "manager/managerRegistration";
     }
     
 }

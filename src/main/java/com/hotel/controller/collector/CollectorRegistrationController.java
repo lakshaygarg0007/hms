@@ -24,7 +24,12 @@ public class CollectorRegistrationController {
         }
         else{
             model.addAttribute("error",pair.getKey());
-            return "collectorRegistration";
+            return "collector/collectorRegistration";
         }
+    }
+
+    @RequestMapping(value = "/collectorRegistration", method = RequestMethod.GET)
+    public String managerRegistration() {
+        return "collector/collectorRegistration";
     }
 }

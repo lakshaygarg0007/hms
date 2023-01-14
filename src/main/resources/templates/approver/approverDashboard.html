@@ -22,12 +22,12 @@
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right ml-auto">
+<!--            <li class="nav-item">-->
+<!--                <div>Total Amount:</div>-->
+<!--                <div th:text="${totalAmount}" style="font-weight: bold; font-size: 20px; color: #ff0000;"></div>-->
+<!--            </li>-->
             <li class="nav-item">
-                <div>Total Amount:</div>
-                <div th:text="${totalAmount}" style="font-weight: bold; font-size: 20px; color: #ff0000;"></div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/">
+                <a class="nav-link" href="/logout">
                     Logout
                 </a>
             </li>
@@ -97,8 +97,8 @@
                 <!--<div class="tab-pane fade" id="remamt" role="tabpanel" aria-labelledby="remamt-tab">
                     <h1>Remaining amount</h1>
                 </div>-->
-                <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab">
-                    <div class="container">
+                <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab" >
+                    <div class="container" style="align-content: center">
                         <form action="/showCollectors" method="post">
                             <div class="row">
                                 <div class="form-group">
@@ -160,28 +160,30 @@
     </table>
 </div>
 <br><br>
-<div class="container">
-    <table class="table">
-        <thead class="thead-dark">
-        <th th:text="${serialNumber}"></th>
-        <th th:text="${cId}"></th>
-        <th th:text="${amount}"></th>
-        </thead>
+<div style="margin-left: 30px; margin-right: 30px">
+    <div class="container ">
+        <table class="table">
+            <thead class="thead-dark">
+            <th th:text="${serialNumber}"></th>
+            <th th:text="${cId}"></th>
+            <th th:text="${amount}"></th>
+            </thead>
 
-        <tbody>
-            <tr th:each="i : ${list}">
-                <form action="/acceptRequest" method="post">
-                <input type="hidden" name="approverId" class="form-control" th:value="${approverId}" placeholder="Approver-Id" readonly>
-                <td><input type="text"  name="serialNumber" th:value="${i.serialNumber}" readonly>  </input></td>
-                <td><input type="text"  name="collectorId" th:value="${i.collectorId}" readonly>  </input></td>
-                <td><input type="text"  name="amount" th:value="${i.amount}" readonly></input></td>
-                <td><input type="submit"  placeholder="Approve Request" value="Approve Request"></td>
-                </form>
-            </tr>
-        </tbody>
-    </table>
-    <div th:text="${error}" style="color: red;font-size: 20px;font-weight: bold;"></div>
-    <div th:text="${success}" style="color: green;font-size: 20px;font-weight: bold;"></div>
+            <tbody>
+                <tr th:each="i : ${list}">
+                    <form action="/acceptRequest" method="post">
+                    <input type="hidden" name="approverId" class="form-control" th:value="${approverId}" placeholder="Approver-Id" readonly>
+                    <td><input type="text"  name="serialNumber" th:value="${i.serialNumber}" readonly>  </input></td>
+                    <td><input type="text"  name="collectorId" th:value="${i.collectorId}" readonly>  </input></td>
+                    <td><input type="text"  name="amount" th:value="${i.amount}" readonly></input></td>
+                    <td><input type="submit"  placeholder="Approve Request" value="Approve Request"></td>
+                    </form>
+                </tr>
+            </tbody>
+        </table>
+        <div th:text="${error}" style="color: red;font-size: 20px;font-weight: bold;"></div>
+        <div th:text="${success}" style="color: green;font-size: 20px;font-weight: bold;"></div>
+    </div>
 </div>
 
 

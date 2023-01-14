@@ -24,9 +24,9 @@ public class TemplateResolverConfiguration {
     }
 
     @Bean
-    public ClassLoaderTemplateResolver secondTemplateResolver() {
-        ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
-        templateResolver.setPrefix("templates/manager/");
+    public SpringResourceTemplateResolver secondTemplateResolver() {
+        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
+        templateResolver.setPrefix("/manager/");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCharacterEncoding("UTF-8");
@@ -60,5 +60,4 @@ public class TemplateResolverConfiguration {
 
         return templateResolver;
     }
-
 }

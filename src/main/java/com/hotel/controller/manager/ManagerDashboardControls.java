@@ -40,7 +40,7 @@ public class ManagerDashboardControls {
         model.addAttribute("totalAmount", totalAmount);
         String succ = "Successfully Done!";
         model.addAttribute("succ",succ);
-        return "managerDashboard";
+        return "manager/managerDashboard";
     }
 
     @RequestMapping(value = "/addExpense",method = RequestMethod.POST)
@@ -52,7 +52,7 @@ public class ManagerDashboardControls {
         model.addAttribute("totalAmount", totalAmount);
         String su = "Expense Successfully Added!";
         model.addAttribute("su", su);
-        return "managerDashboard";
+        return "manager/managerDashboard";
     }
 
    /* @RequestMapping(value = "/viewExpense",method = RequestMethod.POST)
@@ -83,7 +83,7 @@ public class ManagerDashboardControls {
         model.addAttribute("c3","Date");
         model.addAttribute("c4","Delete Record");
         model.addAttribute("c5","Update Record");
-       return "managerDashboard";
+       return "manager/managerDashboard";
     }
     @RequestMapping(value="/expenseHistory",method = RequestMethod.POST)
     public String expenseHistory(@RequestParam(value = "hotelId")String hotelId,@RequestParam(value = "startingDate")@DateTimeFormat(pattern = "yyyy-MM-dd")Date startingDate, @RequestParam(value = "endingDate")@DateTimeFormat(pattern = "yyyy-MM-dd")Date endingDate, Model model)
@@ -104,7 +104,7 @@ public class ManagerDashboardControls {
         catch (Exception e){
             model.addAttribute("error","Date not selected");
         }
-        return "managerDashboard";
+        return "manager/managerDashboard";
     }
 
     @RequestMapping(value = "/deleteTransaction",method = RequestMethod.POST)
@@ -120,7 +120,7 @@ public class ManagerDashboardControls {
         model.addAttribute("hotelId",hotelId);
         totalAmount=managerDashboardService.fetchTotalAmount(hotelId);
         model.addAttribute("totalAmount", totalAmount);
-        return "managerDashboard";
+        return "manager/managerDashboard";
     }
 
     @RequestMapping(value = "/deleteExpense",method = RequestMethod.POST)
@@ -137,7 +137,7 @@ public class ManagerDashboardControls {
         model.addAttribute("hotelId",hotelId);
         totalAmount=managerDashboardService.fetchTotalAmount(hotelId);
         model.addAttribute("totalAmount", totalAmount);
-        return "managerDashboard";
+        return "manager/managerDashboard";
     }
 
 

@@ -58,7 +58,7 @@ public class CollectorDashboardController {
         model.addAttribute("amount","Amount");
         model.addAttribute("c2","cashAvailable");
         model.addAttribute("c3","cashCollected");
-        return "collectorDashboardService";
+        return "collector/collectorDashboard";
     }
 
     @RequestMapping(value = "/collectCash",method = RequestMethod.POST)
@@ -74,7 +74,7 @@ public class CollectorDashboardController {
         else{
             model.addAttribute("error","Invalid Amount Choosen");
         }
-        return "collectorDashboardService";
+        return "collector/collectorDashboard";
     }
 
 

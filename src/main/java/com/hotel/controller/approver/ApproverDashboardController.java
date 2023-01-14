@@ -56,7 +56,7 @@ public class ApproverDashboardController {
         model.addAttribute("serialNumber", "Serial Number");
         model.addAttribute("amount","Amount");
         model.addAttribute("approverId",approverId);
-        return "approverDashboard";
+        return "approver/approverDashboard";
     }
 
     @RequestMapping(value = "/acceptRequest",method = RequestMethod.POST)
