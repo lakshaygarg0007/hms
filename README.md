@@ -7,8 +7,8 @@ Hotel Management System.
 
 Prerequisites For Running the Project
 
-1)Please register one default approver first (Already Done) 
-2)After that register one default collector (Already Done)
+1) Please register one default approver first (Already Done)
+2) After that register one default collector (Already Done)
 
 Project Url - https://hotelmanagementsystem.up.railway.app/
 
@@ -16,3 +16,5 @@ Hosted on Railway
 
 Made In  - Spring Boot And Thymeleaf
 Database - PostgreSQL (Hosted On Render)
+
+Made By Lakshay Garg
